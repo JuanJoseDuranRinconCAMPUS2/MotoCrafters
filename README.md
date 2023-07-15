@@ -4,7 +4,7 @@
 
 [TOC]
 
-![](C:\Users\JuanJ\Downloads\logo.jpg)
+![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/logo.jpg)
 
 ## **🔴🟣Descripción Del Proyecto🟣🔴**
 
