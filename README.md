@@ -10,19 +10,22 @@
 
 El proyecto consiste en desarrollar una página web de gestión de partes y motos para un taller de reparación de motocicletas. El objetivo principal es proporcionar a los talleres una herramienta que les permita consultar de manera sencilla la información relacionada con las partes del catalogo y las motos que están en el taller, así como administrar su inventario de manera eficiente. Para lograr esto, se utilizará SQL y Node.js en el backend para el manejo de la base de datos y la lógica de negocio, y Vue.js en el frontend para crear una interfaz de usuario intuitiva y atractiva.
 
-## **♾️🏁Objetivos Generales🏁♾️**
-
-1. Desarrollar una página web que facilite la gestión de partes y motos en un taller de reparación de motocicletas.
-2. Utilizar SQL y Node.js en el backend para el manejo de la base de datos y la lógica de negocio.
-3. Utilizar Vue.js en el frontend para crear una interfaz de usuario atractiva y fácil de usar.
-4. Proporcionar funciones para consultar información de partes y motos, administrar el inventario de partes y registrar las motos en el taller.
-
-## **🏁🌌Objetivos Especificos🌌🏁**
+## **♾️🏁Objetivo General🏁♾️**
 
 El proyecto consiste en el desarrollo de una página web destinada a ayudar a talleres de motocicletas en la gestión de información sobre las partes de las motocicletas presentes en su catálogo e inventario, de manera más sencilla y visual. Además, se busca proporcionar un medio para registrar las entradas y salidas de motocicletas que son tratadas en el taller.
 La plataforma está diseñada con el propósito de simplificar la consulta de información en el taller, permitiendo visualizar de forma intuitiva y organizada cada una de las partes de las motocicletas. La información se clasifica por modelos, partes generales y sub-partes, facilitando la búsqueda de piezas específicas y sus respectivos códigos de venta.
 En cuanto al manejo del inventario, la herramienta proporciona una función que simplifica la administración de las piezas almacenadas en el taller. Este método de organización permite gestionar eficientemente la cantidad de piezas almacenadas en la base de datos del taller.
 Además, el apartado de registro tiene como objetivo agilizar el proceso de ingreso y salida de motocicletas en el taller. Mediante esta función, se pueden registrar fácilmente todas las motos que ingresan para su reparación y las que son entregadas a sus dueños.
+
+
+## **🏁🌌Objetivos Especificos🌌🏁**
+
+1. Diseñar y desarrollar una base de datos que permita almacenar la información necesaria para partes, motos e inventario.
+2. Implementar las funcionalidades de consulta de información de partes y motos, permitiendo la búsqueda por diferentes criterios como nombre, número de serie,, etc.
+3. Desarrollar un sistema de gestión de inventario que permita agregar, actualizar y eliminar partes del inventario, así como llevar un control de la cantidad disponible de cada parte.
+4. Diseñar una interfaz de usuario intuitiva y amigable que facilite la navegación y el acceso a las diferentes funcionalidades de la página web.
+5. Permitir el registro de motos en el taller, incluyendo detalles como marca, modelo, número de serie, año, partes que la componen y estado de las mismas, etc.
+6. Realizar pruebas exhaustivas para garantizar el correcto funcionamiento de todas las funcionalidades y solucionar cualquier error o problema identificado.
 
 ## 🏹🪷**Progreso del Proyecto**🪷🏹
 
