@@ -30,6 +30,10 @@ Además, el apartado de registro tiene como objetivo agilizar el proceso de ingr
 
 ![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/imagenes/motoCrafters_db.png)
 
+## **🏁🌌 Trabajo para el Viernes 🌌🏁**
+
+Creacion la base de datos con las respectivas tablas y relaciones ademas creacion del crud para todo el apartado del catalogo de la motocicleta
+
 ## 🏹🪷**Progreso del Proyecto**🪷🏹
 
 1. ### Definición del proyecto:
