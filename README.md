@@ -24,8 +24,11 @@ Además, el apartado de registro tiene como objetivo agilizar el proceso de ingr
 2. Implementar las funcionalidades de consulta de información de partes y motos, permitiendo la búsqueda por diferentes criterios como nombre, número de serie,, etc.
 3. Desarrollar un sistema de gestión de inventario que permita agregar, actualizar y eliminar partes del inventario, así como llevar un control de la cantidad disponible de cada parte.
 4. Diseñar una interfaz de usuario intuitiva y amigable que facilite la navegación y el acceso a las diferentes funcionalidades de la página web.
-5. Permitir el registro de motos en el taller, incluyendo detalles como marca, modelo, número de serie, año, partes que la componen y estado de las mismas, etc.
-6. Realizar pruebas exhaustivas para garantizar el correcto funcionamiento de todas las funcionalidades y solucionar cualquier error o problema identificado.
+5. Permitir el registro de motos en el taller, incluyendo detalles como marca, modelo, número de serie, año, problemas que presente y estado de la misma, etc.
+
+## **🏁🌌 Diagrama Entidad Relacion 🌌🏁**
+
+![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/logo.jpg)
 
 ## 🏹🪷**Progreso del Proyecto**🪷🏹
 
@@ -47,7 +50,7 @@ Además, el apartado de registro tiene como objetivo agilizar el proceso de ingr
 
 3. ### Diseño de la base de datos:
 
-   - [ ] Crear una estructura de base de datos que permita almacenar la información necesaria para partes, motos y el inventario.
+   - [x] Crear una estructura de base de datos que permita almacenar la información necesaria para partes, motos y el inventario.
    - [ ] Diseñar tablas para partes, motos y transacciones de inventario.
    - [ ] Establecer relaciones adecuadas entre las tablas para garantizar la integridad de los datos.
 
