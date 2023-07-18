@@ -28,7 +28,7 @@ Además, el apartado de registro tiene como objetivo agilizar el proceso de ingr
 
 ## **🏁🌌 Diagrama Entidad Relacion 🌌🏁**
 
-![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/logo.jpg)
+![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/imagenes/motoCrafters_db.png)
 
 ## 🏹🪷**Progreso del Proyecto**🪷🏹
 
