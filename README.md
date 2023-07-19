@@ -64,7 +64,7 @@ Creacion la base de datos con las respectivas tablas y relaciones ademas creacio
 
 4. ### Desarrollo del backend con Node.js y SQL:
 
-   - [ ] Configurar el entorno de desarrollo con Node.js y una base de datos SQL (con MySQL).
+   - [x] Configurar el entorno de desarrollo con Node.js y una base de datos SQL (con MySQL).
    - [ ] Implementar las rutas y controladores necesarios para las operaciones de consulta, administración de partes y motos, y gestión de inventario.
    - [ ] Utilizar sentencias SQL para realizar consultas y actualizaciones en la base de datos.
 
