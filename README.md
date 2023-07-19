@@ -32,7 +32,7 @@ Además, el apartado de registro tiene como objetivo agilizar el proceso de ingr
 
 ## **✨⚙️ Diagrama Con Colores ⚙️✨**
 
-![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/imagenes/motoCrafters_db.png)
+![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/imagenes/motoCrafters_dbColor.png)
 
 ## **🎉🥽 Trabajo para el Lunes 🥽🎉**
 
