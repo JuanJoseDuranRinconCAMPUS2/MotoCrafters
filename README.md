@@ -26,11 +26,15 @@ Además, el apartado de registro tiene como objetivo agilizar el proceso de ingr
 4. Diseñar una interfaz de usuario intuitiva y amigable que facilite la navegación y el acceso a las diferentes funcionalidades de la página web.
 5. Permitir el registro de motos en el taller, incluyendo detalles como marca, modelo, número de serie, año, problemas que presente y estado de la misma, etc.
 
-## **🏁🌌 Diagrama Entidad Relacion 🌌🏁**
+## **⚙️🚀 Diagrama Entidad Relacion ⚙️🚀**
 
 ![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/imagenes/motoCrafters_db.png)
 
-## **🏁🌌 Trabajo para el Viernes 🌌🏁**
+## **✨⚙️ Diagrama Con Colores ⚙️✨**
+
+![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/imagenes/motoCrafters_db.png)
+
+## **🎉🥽 Trabajo para el Lunes 🥽🎉**
 
 Creacion la base de datos con las respectivas tablas y relaciones ademas creacion del crud para todo el apartado del catalogo de la motocicleta
 
@@ -55,8 +59,8 @@ Creacion la base de datos con las respectivas tablas y relaciones ademas creacio
 3. ### Diseño de la base de datos:
 
    - [x] Crear una estructura de base de datos que permita almacenar la información necesaria para partes, motos y el inventario.
-   - [ ] Diseñar tablas para partes, motos y transacciones de inventario.
-   - [ ] Establecer relaciones adecuadas entre las tablas para garantizar la integridad de los datos.
+   - [x] Diseñar tablas para partes, motos y transacciones de inventario.
+   - [x] Establecer relaciones adecuadas entre las tablas para garantizar la integridad de los datos.
 
 4. ### Desarrollo del backend con Node.js y SQL:
 
