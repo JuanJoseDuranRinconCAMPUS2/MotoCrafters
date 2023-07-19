@@ -155,6 +155,8 @@ CREATE TABLE Motocicleta_En_Taller (
   Met_Estado INT UNSIGNED NOT NULL COMMENT 'Identificación del estado de la motocicleta',
   Met_Fecha_Ingreso DATE NOT NULL COMMENT 'Fecha de ingreso de la motocicleta al taller',
   Met_Fecha_Salida DATE COMMENT 'Fecha de salida de la motocicleta del taller',
+  Met_Tipo INT UNSIGNED NOT NULL COMMENT 'Identificación del tipo de la motocicleta',
+  Met_Categoria INT UNSIGNED NOT NULL COMMENT 'Identificación de la categoria de la motocicleta',
   Met_Descripcion_Problema VARCHAR(255) NOT NULL COMMENT 'Descripcion de los problemas encontrados en la motocicleta',
   Met_Descripcion_Reparacion VARCHAR(255) COMMENT 'Descripcion de las reparaciones realizadas en la motocicleta',
   Met_Costo_Reparacion INT UNSIGNED NOT NULL COMMENT 'Costo de la reparacion de la motocicleta',
@@ -199,3 +201,69 @@ CREATE TABLE Genero_Identificacion(
 );
 
 /* Creacion de las llaves foraneas */
+
+/*Creacion de las relaciones entre la tabla Motocicleta con Colores*/
+ALTER TABLE Motocicleta ADD CONSTRAINT  Motocicleta_Colores_fk FOREIGN KEY(Mto_Colores) REFERENCES Colores(Cl_Id);
+
+/*Creacion de las relaciones entre la tabla Motocicleta con Marca*/
+ALTER TABLE Motocicleta ADD CONSTRAINT  Motocicleta_Marca_fk FOREIGN KEY(Mto_Marca) REFERENCES Marca(Mrc_Id);
+
+/*Creacion de las relaciones entre la tabla Motocicleta_En_Taller con Marca*/
+ALTER TABLE Motocicleta_En_Taller ADD CONSTRAINT  Motocicleta_En_Taller_Marca_fk FOREIGN KEY(Met_Marca) REFERENCES Marca(Mrc_Id);
+
+/*Creacion de las relaciones entre la tabla Motocicleta con Tipo_Motocicleta*/
+ALTER TABLE Motocicleta ADD CONSTRAINT  Motocicleta_Tipo_Motocicleta_fk FOREIGN KEY(Mto_Tipo) REFERENCES Tipo_Motocicleta(Tpo_Id);
+
+/*Creacion de las relaciones entre la tabla Motocicleta_En_Taller con Tipo_Motocicleta*/
+ALTER TABLE Motocicleta_En_Taller ADD CONSTRAINT  Motocicleta_En_Taller_Tipo_Motocicleta_fk FOREIGN KEY(Met_Tipo) REFERENCES Tipo_Motocicleta(Tpo_Id);
+
+/*Creacion de las relaciones entre la tabla Motocicleta con Categoria_Motocicleta*/
+ALTER TABLE Motocicleta ADD CONSTRAINT  Motocicleta_Categoria_Motocicleta_fk FOREIGN KEY(Mto_Categoria) REFERENCES Categoria_Motocicleta(Cat_Id);
+
+/*Creacion de las relaciones entre la tabla Motocicleta_En_Taller con Categoria_Motocicleta*/
+ALTER TABLE Motocicleta_En_Taller ADD CONSTRAINT  Motocicleta_En_Taller_Categoria_Motocicleta_fk FOREIGN KEY(Met_Categoria) REFERENCES Categoria_Motocicleta(Cat_Id);
+
+/*Creacion de las relaciones entre la tabla Motocicleta con Catalogo*/
+ALTER TABLE Motocicleta ADD CONSTRAINT  Motocicleta_Catalogo_fk FOREIGN KEY(Mto_Catalogo) REFERENCES Catalogo(Ctl_Id);
+
+/*Creacion de las relaciones entre la tabla Motocicleta_En_Taller con Estado_Taller*/
+ALTER TABLE Motocicleta_En_Taller ADD CONSTRAINT  Motocicleta_En_Taller_Estado_Taller_fk FOREIGN KEY(Met_Estado) REFERENCES Estado_Taller(Et_Id);
+
+/*Creacion de las relaciones entre la tabla Motocicleta_En_Taller con Dueño_Motocicleta*/
+ALTER TABLE Motocicleta_En_Taller ADD CONSTRAINT  Motocicleta_En_Taller_Dueño_Motocicleta_fk FOREIGN KEY(Met_Dueño) REFERENCES Dueño_Motocicleta(Dm_Id);
+
+/*Creacion de las relaciones entre la tabla Dueño_Motocicleta con Tipo_Identificacion*/
+ALTER TABLE Dueño_Motocicleta ADD CONSTRAINT  Dueño_Motocicleta_Tipo_Identificacion_fk FOREIGN KEY(Dm_Tipo_Iden) REFERENCES Tipo_Identificacion(Td_Id);
+
+/*Creacion de las relaciones entre la tabla Dueño_Motocicleta con Genero_Identificacion*/
+ALTER TABLE Dueño_Motocicleta ADD CONSTRAINT  Dueño_Motocicleta_Genero_Identificacion_fk FOREIGN KEY(Dm_Genero) REFERENCES Genero_Identificacion(Gt_Id);
+
+/*Creacion de las relaciones entre la tabla Catalogo con Grupo_Engine*/
+ALTER TABLE Catalogo ADD CONSTRAINT  Catalogo_Grupo_Engine_fk FOREIGN KEY(Ctl_Grupo_Engine) REFERENCES Grupo_Engine(Ge_Id);
+
+/*Creacion de las relaciones entre la tabla Catalogo con Grupo_Frame*/
+ALTER TABLE Catalogo ADD CONSTRAINT  Catalogo_Grupo_Frame_fk FOREIGN KEY(Ctl_Grupo_Frame) REFERENCES Grupo_Frame(Gf_Id);
+
+/*Creacion de las relaciones entre la tabla Piezas_Grupo_Engine con Grupo_Engine*/
+ALTER TABLE Piezas_Grupo_Engine ADD CONSTRAINT  Piezas_Grupo_Engine_Grupo_Engine_fk FOREIGN KEY(Pge_Grupo_Ref) REFERENCES Grupo_Engine(Ge_Id);
+
+/*Creacion de las relaciones entre la tabla Piezas_Grupo_Frame con Grupo_Frame*/
+ALTER TABLE Piezas_Grupo_Frame ADD CONSTRAINT  Piezas_Grupo_Frame_Grupo_Frame_fk FOREIGN KEY(Pgf_Grupo_Ref) REFERENCES Grupo_Frame(Gf_Id);
+
+/*Creacion de las relaciones entre la tabla SubPiezas_Grupo_Engine con Piezas_Grupo_Engine*/
+ALTER TABLE SubPiezas_Grupo_Engine ADD CONSTRAINT  SubPiezas_Grupo_Engine_Piezas_Grupo_Engine_fk FOREIGN KEY(Sge_Grupo_Piezas) REFERENCES Piezas_Grupo_Engine(Pge_Id);
+
+/*Creacion de las relaciones entre la tabla SubPiezas_Grupo_Frame con Piezas_Grupo_Frame*/
+ALTER TABLE SubPiezas_Grupo_Frame ADD CONSTRAINT  SubPiezas_Grupo_Frame_Piezas_Grupo_Frame_fk FOREIGN KEY(Sgf_Grupo_Piezas) REFERENCES Piezas_Grupo_Frame(Pgf_Id);
+
+/*Creacion de las relaciones entre la tabla Inv_Piezas_Engine con SubPiezas_Grupo_Engine*/
+ALTER TABLE Inv_Piezas_Engine ADD CONSTRAINT  Inv_Piezas_Engine_Piezas_Grupo_Engine_fk FOREIGN KEY(Ipe_Pieza_Id) REFERENCES SubPiezas_Grupo_Engine(Sge_Id);
+
+/*Creacion de las relaciones entre la tabla Inv_Piezas_Frame con SubPiezas_Grupo_Frame*/
+ALTER TABLE Inv_Piezas_Frame ADD CONSTRAINT  Inv_Piezas_Frame_SubPiezas_Grupo_Frame_fk FOREIGN KEY(Ipf_Pieza_Id) REFERENCES SubPiezas_Grupo_Frame(Sgf_Id);
+
+/*Creacion de las relaciones entre la tabla Inv_Piezas_Engine con Inventario*/
+ALTER TABLE Inv_Piezas_Engine ADD CONSTRAINT  Inv_Piezas_Engine_Inventario_fk FOREIGN KEY(Ipe_Inventario) REFERENCES Inventario(Inv_Id);
+
+/*Creacion de las relaciones entre la tabla Inv_Piezas_Frame con Inventario*/
+ALTER TABLE Inv_Piezas_Frame ADD CONSTRAINT  Inv_Piezas_Frame_Inventario_fk FOREIGN KEY(Ipf_Inventario) REFERENCES Inventario(Inv_Id);
