@@ -10,6 +10,9 @@ CColores.use((req,res,next)=>{
     con = mysql.createPool(myconfig);
     next();
 })
+
+// metodo get
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
 CColores.get('/GetColores', (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Colores`,
@@ -24,6 +27,10 @@ CColores.get('/GetColores', (req,res)=>{
         }
     );
 })
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
+
+// metodo post
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
 CColores.post('/PostColores', (req,res)=>{
     const valoresColores = Object.values(req.body);
     const coloresJSON = {};    
@@ -45,6 +52,10 @@ CColores.post('/PostColores', (req,res)=>{
         }
     );
 })
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
+
+// metodo put
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
 CColores.put('/PutColores', (req,res)=>{
     const valoresColores = Object.values(req.body);
     const idColor = req.query.idColor;
@@ -71,6 +82,10 @@ CColores.put('/PutColores', (req,res)=>{
         }
     );
 })
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
+
+// metodo delete
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
 CColores.delete('/DeleteColores', (req,res)=>{
     const idColor = req.body.IdDelete;
     con.query(
@@ -90,4 +105,6 @@ CColores.delete('/DeleteColores', (req,res)=>{
         }
     );
 })
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
+
 export default CColores;

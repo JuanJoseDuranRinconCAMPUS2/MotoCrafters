@@ -10,6 +10,9 @@ CMarca.use((req,res,next)=>{
     con = mysql.createPool(myconfig);
     next();
 })
+
+// metodo get
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
 CMarca.get('/GetMarcas', (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Marca`,
@@ -24,6 +27,10 @@ CMarca.get('/GetMarcas', (req,res)=>{
         }
     );
 })
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
+
+// metodo post
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
 CMarca.post('/PostMarcas', (req,res)=>{
     const { nombreMarca } = req.body;
     con.query(
@@ -39,6 +46,10 @@ CMarca.post('/PostMarcas', (req,res)=>{
         }
     );
 })
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
+
+// metodo put
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
 CMarca.put('/PutMarcas', (req,res)=>{
     const idMarca = req.query.idMarca;
     const {nombreMarca} = req.body;
@@ -59,6 +70,10 @@ CMarca.put('/PutMarcas', (req,res)=>{
         }
     );
 })
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
+
+// metodo delete
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
 CMarca.delete('/DeleteMarcas', (req,res)=>{
     const idMarca = req.body.IdDelete;
     con.query(
@@ -78,4 +93,5 @@ CMarca.delete('/DeleteMarcas', (req,res)=>{
         }
     );
 })
+// ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
 export default CMarca;
