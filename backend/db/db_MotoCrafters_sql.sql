@@ -19,7 +19,6 @@ CREATE TABLE Motocicleta (
   Mto_Colores INT UNSIGNED NOT NULL COMMENT 'Identificación de los colores disponibles de la motocicleta',
   Mto_Tipo INT UNSIGNED NOT NULL COMMENT 'Identificación del tipo de la motocicleta',
   Mto_Categoria INT UNSIGNED NOT NULL COMMENT 'Identificación de la categoría de la motocicleta',
-  Mto_Catalogo INT UNSIGNED NOT NULL COMMENT 'Identificación del catálogo de piezas de la motocicleta',
   Mto_Url_imagen VARCHAR(200) NOT NULL COMMENT 'Imagen de la motocicleta'
 );
 
@@ -27,7 +26,7 @@ CREATE TABLE Motocicleta (
 
 CREATE TABLE Colores(
     Cl_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de cada grupo de colores',
-    Cl_DisColores VARCHAR(10) NOT NULL COMMENT 'colores disponibles'
+    Cl_DisColores JSON NOT NULL COMMENT 'colores disponibles'
 );
 
 /* creacion de la tabla de Marca */
@@ -41,22 +40,23 @@ CREATE TABLE Marca(
 
 CREATE TABLE Tipo_Motocicleta(
     Tpo_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de cada tipo de motocicletas',
-    Tpo_Nombre VARCHAR(10) NOT NULL COMMENT 'Nombre del tipo de motocicletas'
+    Tpo_Nombre VARCHAR(20) NOT NULL COMMENT 'Nombre del tipo de motocicletas'
 );
 
 /* creacion de la tabla de Categoria_Motocicleta */
 
 CREATE TABLE Categoria_Motocicleta(
     Cat_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de cada categoria de motocicletas',
-    Cat_Nombre VARCHAR(10) NOT NULL COMMENT 'Nombre de la categoria de motocicletas'
+    Cat_Nombre VARCHAR(20) NOT NULL COMMENT 'Nombre de la categoria de motocicletas'
 );
 
 /* creacion de la tabla de Catalogo */
 
 CREATE TABLE Catalogo(
     Ctl_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de cada catalogo de partes de cada motocicleta',
+    Ctl_Motocicleta INT UNSIGNED NOT NULL COMMENT 'Identificación de la motocicleta de este catalogo',
     Ctl_Modelo VARCHAR(40) NOT NULL COMMENT 'Modelo de la moto que aparece en el catalogo',
-    Ctl_Descripcion VARCHAR(100) NOT NULL COMMENT 'Descripcion acerca del catalogo',
+    Ctl_Descripcion VARCHAR(200) NOT NULL COMMENT 'Descripcion acerca del catalogo',
     Ctl_Version VARCHAR(50) NOT NULL COMMENT 'Version en la que se encuentra el catalogo',
     Ctl_Grupo_Engine INT UNSIGNED NOT NULL COMMENT 'Identificación del grupo de piezas engine que pertenece al catalogo',
     Ctl_Grupo_Frame INT UNSIGNED NOT NULL COMMENT 'Identificación del grupo de piezas frame que pertenece al catalogo'
@@ -66,7 +66,14 @@ CREATE TABLE Catalogo(
 
 CREATE TABLE Grupo_Engine(
     Ge_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de cada grupo Engine de las motocicletas',
-    Ge_Descripcion VARCHAR(100) NOT NULL COMMENT 'Descripcion acerca del grupo Engine de la motocicleta'
+    Ge_Descripcion VARCHAR(200) NOT NULL COMMENT 'Descripcion acerca del grupo Engine de la motocicleta'
+);
+
+/* creacion de la tabla de Grupo_Frame */
+
+CREATE TABLE Grupo_Frame(
+    Gf_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de cada grupo Frame de las motocicletas',
+    Gf_Descripcion VARCHAR(200) NOT NULL COMMENT 'Descripcion acerca del grupo Frame de la motocicleta'
 );
 
 /* creacion de la tabla de Piezas_Grupo_Engine */
@@ -74,7 +81,7 @@ CREATE TABLE Grupo_Engine(
 CREATE TABLE Piezas_Grupo_Engine(
     Pge_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de cada pieza que hace parte del grupo Engine',
     Pge_No VARCHAR(3) NOT NULL COMMENT 'Numero de identificacion de la pieza en el catalogo oficial',
-    Pge_Descripcion VARCHAR(100) NOT NULL COMMENT 'Descripcion acerca de la pieza que hace parte del grupo Engine',
+    Pge_Descripcion VARCHAR(200) NOT NULL COMMENT 'Descripcion acerca de la pieza que hace parte del grupo Engine',
     Pge_Diagrama VARCHAR(200) NOT NULL COMMENT 'Url del diagrama de sub piezas de la pieza',
     Pge_Url_Imagen VARCHAR(200) NOT NULL COMMENT 'Url de la imagen de la pieza',
     Pge_Grupo_Ref INT UNSIGNED NOT NULL COMMENT 'Identificación del grupo Engine que pertenece la pieza'
@@ -85,7 +92,7 @@ CREATE TABLE Piezas_Grupo_Engine(
 CREATE TABLE Piezas_Grupo_Frame(
     Pgf_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de cada pieza que hace parte del grupo Frame',
     Pgf_No VARCHAR(3) NOT NULL COMMENT 'Numero de identificacion de la pieza en el catalogo oficial',
-    Pgf_Descripcion VARCHAR(100) NOT NULL COMMENT 'Descripcion acerca de la pieza que hace parte del grupo Frame',
+    Pgf_Descripcion VARCHAR(200) NOT NULL COMMENT 'Descripcion acerca de la pieza que hace parte del grupo Frame',
     Pgf_Diagrama VARCHAR(200) NOT NULL COMMENT 'Url del diagrama de sub piezas de la pieza',
     Pgf_Url_Imagen VARCHAR(200) NOT NULL COMMENT 'Url de la imagen de la pieza',
     Pgf_Grupo_Ref INT UNSIGNED NOT NULL COMMENT 'Identificación del grupo Frame que pertenece la pieza'
@@ -117,7 +124,7 @@ CREATE TABLE SubPiezas_Grupo_Frame(
 
 CREATE TABLE Inventario(
     Inv_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador del inventario',
-    Inv_Descripcion VARCHAR(100) NOT NULL COMMENT 'Descripcion del inventario'
+    Inv_Descripcion VARCHAR(200) NOT NULL COMMENT 'Descripcion del inventario'
 );
 
 /* creacion de la tabla de Inv_Piezas_Engine */
@@ -145,29 +152,26 @@ CREATE TABLE Inv_Piezas_Frame(
 /* creacion de la tabla de Motocicleta_En_Taller */
 
 CREATE TABLE Motocicleta_En_Taller (
-  Met_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de la motocicleta',
-  Met_Marca INT UNSIGNED NOT NULL COMMENT 'Identificación de la marca de la motocicleta',
-  Met_Nom_Modelo VARCHAR(45) NOT NULL COMMENT 'Nombre del modelo de la motocicleta',
-  Met_Año_Modelo VARCHAR(4) NOT NULL COMMENT 'Año del modelo de la motocicleta',
-  Met_Num_Chasis VARCHAR(17) NOT NULL COMMENT 'Numero del chasis de la motocicleta',
-  Met_Color VARCHAR(10) NOT NULL COMMENT 'Color de la motocicleta',
-  Met_Dueño INT UNSIGNED NOT NULL COMMENT 'Identificación del dueño de la motocicleta',
-  Met_Estado INT UNSIGNED NOT NULL COMMENT 'Identificación del estado de la motocicleta',
-  Met_Fecha_Ingreso DATE NOT NULL COMMENT 'Fecha de ingreso de la motocicleta al taller',
-  Met_Fecha_Salida DATE COMMENT 'Fecha de salida de la motocicleta del taller',
-  Met_Tipo INT UNSIGNED NOT NULL COMMENT 'Identificación del tipo de la motocicleta',
-  Met_Categoria INT UNSIGNED NOT NULL COMMENT 'Identificación de la categoria de la motocicleta',
-  Met_Descripcion_Problema VARCHAR(255) NOT NULL COMMENT 'Descripcion de los problemas encontrados en la motocicleta',
-  Met_Descripcion_Reparacion VARCHAR(255) COMMENT 'Descripcion de las reparaciones realizadas en la motocicleta',
-  Met_Costo_Reparacion INT UNSIGNED NOT NULL COMMENT 'Costo de la reparacion de la motocicleta',
-  Mto_Url_imagen VARCHAR(200) NOT NULL COMMENT 'Imagen de la motocicleta'
+    Met_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador de la motocicleta',
+    Met_Marca INT UNSIGNED NOT NULL COMMENT 'Identificación de la marca de la motocicleta',
+    Met_Nom_Modelo VARCHAR(45) NOT NULL COMMENT 'Nombre del modelo de la motocicleta',
+    Met_Año_Modelo VARCHAR(4) NOT NULL COMMENT 'Año del modelo de la motocicleta',
+    Met_Num_Chasis VARCHAR(17) NOT NULL COMMENT 'Numero del chasis de la motocicleta',
+    Met_Kilometraje VARCHAR(5) NOT NULL COMMENT 'Numero de kilometraje de la motocicleta',
+    Met_Color VARCHAR(10) NOT NULL COMMENT 'Color de la motocicleta',
+    Met_Dueño INT UNSIGNED NOT NULL COMMENT 'Identificación del dueño de la motocicleta',
+    Met_Estado INT UNSIGNED NOT NULL COMMENT 'Identificación del estado de la motocicleta',
+    Met_Tipo INT UNSIGNED NOT NULL COMMENT 'Identificación del tipo de la motocicleta',
+    Met_Categoria INT UNSIGNED NOT NULL COMMENT 'Identificación de la categoria de la motocicleta',
+    Met_Fecha_Registro DATE NOT NULL COMMENT 'Fecha de registro de la moto',
+    Met_Url_imagen VARCHAR(200) NOT NULL COMMENT 'Imagen de la motocicleta'
 );
 
-/* creacion de la tabla de Estado_Taller */
+/* creacion de la tabla de Estado_Motocicleta */
 
-CREATE TABLE Estado_Taller(
-    Et_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador del estado de la motocicleta',
-    Et_Nombre VARCHAR(20) NOT NULL COMMENT 'nombre del estado en que se encuentra la motocicleta en estos momentos'
+CREATE TABLE Estado_Motocicleta(
+    Em_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador del estado de la motocicleta',
+    Em_Nombre VARCHAR(20) NOT NULL COMMENT 'nombre del estado en que se encuentra la motocicleta en estos momentos'
 );
 
 /* creacion de la tabla de Dueño_Motocicleta */
@@ -179,9 +183,45 @@ CREATE TABLE Dueño_Motocicleta(
     Dm_Identificacion VARCHAR(100) NOT NULL COMMENT 'Numero de identificacion del dueño de la motocicleta',
     Dm_Telefono VARCHAR(100) NOT NULL COMMENT 'Telefono del dueño de la motocicleta',
     Dm_Email VARCHAR(100) COMMENT 'email del dueño de la motocicleta',
-    Dm_Direccion VARCHAR(100) NOT NULL COMMENT 'Direccion del dueño de la motocicleta',
+    Dm_Direccion VARCHAR(200) NOT NULL COMMENT 'Direccion del dueño de la motocicleta',
     Dm_Genero INT UNSIGNED NOT NULL COMMENT 'Identificación del genero que tiene el dueño de la motocicleta',
     Dm_Fecha_Registro DATE NOT NULL COMMENT 'Fecha de registro del dueño de la motocicleta'
+);
+
+/* creacion de la tabla de Historial_Motocicleta */
+
+CREATE TABLE Historial_Motocicleta(
+    Hm_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador del dueño de la motocicleta',
+    Hm_MecanicoAsig INT UNSIGNED NOT NULL COMMENT 'Identificación del tipo de documento que tiene el dueño de la motocicleta',
+    Hm_Descripcion VARCHAR(100) NOT NULL COMMENT 'Descripcion detallada acerca del historial',
+    Hm_Fecha_Ingreso DATE NOT NULL COMMENT 'Fecha de ingreso de la motocicleta',
+    Hm_Fecha_Salida DATE  COMMENT 'Fecha de salida de la motocicleta',
+    Hm_Descripcion_Problema VARCHAR(200) NOT NULL COMMENT 'Descripcion detallada del problema encontrado en la motocicleta',
+    Hm_Descripcion_Reparacion VARCHAR(200) COMMENT 'Descripcion detallada de la reparacion realizada a la motocicleta',
+    Hm_Observaciones VARCHAR(200) NOT NULL COMMENT 'Observaciones hechas acerca de la motocicleta',
+    Hm_Motocicleta INT UNSIGNED NOT NULL COMMENT 'Identificación de la motocicleta que tiene este historial'
+);
+
+/* creacion de la tabla de Mecanico */
+
+CREATE TABLE Mecanico(
+    Mec_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador del mecanico',
+    Mec_Nombre VARCHAR(100) NOT NULL COMMENT 'Nombre del mecanico',
+    Mec_Especialidad INT UNSIGNED NOT NULL COMMENT 'Identificación de la especialidad que tiene el mecanico',
+    Mec_Tipo_Iden INT UNSIGNED NOT NULL COMMENT 'Identificación del tipo de documento que tiene el mecanico',
+    Mec_Identificacion VARCHAR(100) NOT NULL COMMENT 'Numero de identificacion del mecanico',
+    Mec_Telefono VARCHAR(100) NOT NULL COMMENT 'Telefono del mecanico',
+    Mec_Email VARCHAR(100) COMMENT 'Email del mecanico',
+    Mec_Direccion VARCHAR(200) NOT NULL COMMENT 'Direccion del mecanico',
+    Mec_Genero INT UNSIGNED NOT NULL COMMENT 'Identificación del genero que tiene el mecanico',
+    Mec_Fecha_Registro DATE NOT NULL COMMENT 'Fecha de registro del mecanico'
+);
+
+/* creacion de la tabla de Especialidad */
+
+CREATE TABLE Especialidad(
+    Esp_Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT'Identificador de la especialidad',
+    Esp_Nombre VARCHAR(50) NOT NULL COMMENT'Nombre de la especialidad'
 );
 
 /* creacion de la tabla de Tipo_Identificacion */
@@ -223,11 +263,11 @@ ALTER TABLE Motocicleta ADD CONSTRAINT  Motocicleta_Categoria_Motocicleta_fk FOR
 /*Creacion de las relaciones entre la tabla Motocicleta_En_Taller con Categoria_Motocicleta*/
 ALTER TABLE Motocicleta_En_Taller ADD CONSTRAINT  Motocicleta_En_Taller_Categoria_Motocicleta_fk FOREIGN KEY(Met_Categoria) REFERENCES Categoria_Motocicleta(Cat_Id);
 
-/*Creacion de las relaciones entre la tabla Motocicleta con Catalogo*/
-ALTER TABLE Motocicleta ADD CONSTRAINT  Motocicleta_Catalogo_fk FOREIGN KEY(Mto_Catalogo) REFERENCES Catalogo(Ctl_Id);
+/*Creacion de las relaciones entre la tabla Catalogo con Motocicleta*/
+ALTER TABLE Catalogo ADD CONSTRAINT  Catalogo_Motocicleta_fk FOREIGN KEY(Ctl_Motocicleta) REFERENCES Motocicleta(Mto_Id);
 
-/*Creacion de las relaciones entre la tabla Motocicleta_En_Taller con Estado_Taller*/
-ALTER TABLE Motocicleta_En_Taller ADD CONSTRAINT  Motocicleta_En_Taller_Estado_Taller_fk FOREIGN KEY(Met_Estado) REFERENCES Estado_Taller(Et_Id);
+/*Creacion de las relaciones entre la tabla Motocicleta_En_Taller con Estado_Motocicleta*/
+ALTER TABLE Motocicleta_En_Taller ADD CONSTRAINT  Motocicleta_En_Taller_Estado_Motocicleta_fk FOREIGN KEY(Met_Estado) REFERENCES Estado_Motocicleta(Em_Id);
 
 /*Creacion de las relaciones entre la tabla Motocicleta_En_Taller con Dueño_Motocicleta*/
 ALTER TABLE Motocicleta_En_Taller ADD CONSTRAINT  Motocicleta_En_Taller_Dueño_Motocicleta_fk FOREIGN KEY(Met_Dueño) REFERENCES Dueño_Motocicleta(Dm_Id);
@@ -237,6 +277,21 @@ ALTER TABLE Dueño_Motocicleta ADD CONSTRAINT  Dueño_Motocicleta_Tipo_Identific
 
 /*Creacion de las relaciones entre la tabla Dueño_Motocicleta con Genero_Identificacion*/
 ALTER TABLE Dueño_Motocicleta ADD CONSTRAINT  Dueño_Motocicleta_Genero_Identificacion_fk FOREIGN KEY(Dm_Genero) REFERENCES Genero_Identificacion(Gt_Id);
+
+/*Creacion de las relaciones entre la tabla Mecanico con Tipo_Identificacion*/
+ALTER TABLE Mecanico ADD CONSTRAINT  Mecanico_Tipo_Identificacion_fk FOREIGN KEY(Mec_Tipo_Iden) REFERENCES Tipo_Identificacion(Td_Id);
+
+/*Creacion de las relaciones entre la tabla Mecanico con Genero_Identificacion*/
+ALTER TABLE Mecanico ADD CONSTRAINT  Mecanico_Genero_Identificacion_fk FOREIGN KEY(Mec_Genero) REFERENCES Genero_Identificacion(Gt_Id);
+
+/*Creacion de las relaciones entre la tabla Mecanico con Especialidad*/
+ALTER TABLE Mecanico ADD CONSTRAINT  Mecanico_Especialidad_fk FOREIGN KEY(Mec_Especialidad) REFERENCES Especialidad(Esp_Id);
+
+/*Creacion de las relaciones entre la tabla Historial_Motocicleta con Motocicleta_En_Taller*/
+ALTER TABLE Historial_Motocicleta ADD CONSTRAINT  Historial_Motocicleta_Motocicleta_En_Taller_fk FOREIGN KEY(Hm_Motocicleta) REFERENCES Motocicleta_En_Taller(Met_Id);
+
+/*Creacion de las relaciones entre la tabla Historial_Motocicleta con Mecanico*/
+ALTER TABLE Historial_Motocicleta ADD CONSTRAINT  Historial_Motocicleta_Mecanico_fk FOREIGN KEY(Hm_MecanicoAsig) REFERENCES Mecanico(Mec_Id);
 
 /*Creacion de las relaciones entre la tabla Catalogo con Grupo_Engine*/
 ALTER TABLE Catalogo ADD CONSTRAINT  Catalogo_Grupo_Engine_fk FOREIGN KEY(Ctl_Grupo_Engine) REFERENCES Grupo_Engine(Ge_Id);
