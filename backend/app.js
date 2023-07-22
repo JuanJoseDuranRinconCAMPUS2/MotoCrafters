@@ -4,6 +4,7 @@ import CColores from './routes/CrudColores.js';
 import CMarca from './routes/CrudMarca.js';
 import CTiposMotocicletas from './routes/CrudTiposMotocicletas.js';
 import CCategoriasMotocicletas from './routes/CrudCategoriasMotocicletas.js';
+import CMotocicletas from './routes/CrudMotocicletas.js';
 console.clear();
 dotnev.config();
 
@@ -16,6 +17,7 @@ MotoApi.use("/Colores", CColores);
 MotoApi.use("/Marcas", CMarca);
 MotoApi.use("/TiposMotocicletas", CTiposMotocicletas);
 MotoApi.use("/CategoriasMotocicletas", CCategoriasMotocicletas);
+MotoApi.use("/Motocicletas", CMotocicletas);
 // ════════ ⋆★⋆ ════════
 
 const config = JSON.parse(process.env.MY_CONFIG);
