@@ -11,6 +11,7 @@ import CCatalogo from './routes/CrudCatalogo.js';
 import CPiezasGrupoEngine from './routes/CrudPiezasGrupoEngine.js';
 import CPiezasGrupoFrame from './routes/CrudPiezasGrupoFrame.js';
 import CSubPiezasGrupoEngine from './routes/CrudSubPiezasGrupoEngine.js';
+import CSubPiezasGrupoFrame from './routes/CrudSubPiezasGrupoFrame.js';
 CGrupoEngine
 console.clear();
 dotnev.config();
@@ -31,6 +32,7 @@ MotoApi.use("/Catalogo", CCatalogo);
 MotoApi.use("/PiezasGrupoEngine", CPiezasGrupoEngine);
 MotoApi.use("/SubPiezasGrupoEngine", CSubPiezasGrupoEngine);
 MotoApi.use("/PiezasGrupoFrame", CPiezasGrupoFrame);
+MotoApi.use("/SubPiezasGrupoFrame", CSubPiezasGrupoFrame);
 // ════════ ⋆★⋆ ════════
 
 const config = JSON.parse(process.env.MY_CONFIG);
