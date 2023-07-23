@@ -14,6 +14,7 @@ import CSubPiezasGrupoEngine from './routes/CrudSubPiezasGrupoEngine.js';
 import CSubPiezasGrupoFrame from './routes/CrudSubPiezasGrupoFrame.js';
 import CInventario from './routes/CrudInventario.js';
 import CInvPiezasEngine from './routes/CrudInvPiezasEngine.js';
+import CInvPiezasFrame from './routes/CrudInvPiezasFrame.js';
 CGrupoEngine
 console.clear();
 dotnev.config();
@@ -37,7 +38,7 @@ MotoApi.use("/PiezasGrupoFrame", CPiezasGrupoFrame);
 MotoApi.use("/SubPiezasGrupoFrame", CSubPiezasGrupoFrame);
 MotoApi.use("/Inventario", CInventario);
 MotoApi.use("/InvPiezasEngine", CInvPiezasEngine);
-
+MotoApi.use("/InvPiezasFrame", CInvPiezasFrame);
 // ════════ ⋆★⋆ ════════
 
 const config = JSON.parse(process.env.MY_CONFIG);
