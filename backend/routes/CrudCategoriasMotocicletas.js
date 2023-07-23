@@ -39,7 +39,7 @@ CCategoriasMotocicletas.post('/PostCategoriasMotocicletas', proxyPCategorias, (r
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al enviar la data`;
-                res.status(500).send(errorMessage, err.message);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessage}`);
             } else {
                 res.send("La data a sido enviada correctamente");
             }
@@ -59,10 +59,10 @@ CCategoriasMotocicletas.put('/PutCategoriasMotocicletas',proxyPutCategorias, (re
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al actualizar la data`;
-                res.status(500).send(errorMessage);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessage}`);
             } else {
                 if (data.affectedRows === 0) {
-                    res.status(404).send(`el tipo de motocicleta con el ID ${idCategoria} no existe.`);
+                    res.status(404).send(`La Categoria de motocicleta con el ID ${idCategoria} no existe.`);
                 } else {
                     res.send("Los datos han sido actualizados correctamente");
                 }
@@ -82,10 +82,10 @@ CCategoriasMotocicletas.delete('/DeleteCategoriasMotocicletas', proxyDeleteCateg
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al borrar la data`;
-                res.status(500).send(errorMessage);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessage}`);
             } else {
                 if (data.affectedRows === 0) {
-                    res.status(404).send(`el tipo de motocicleta con el ID ${idCategoria} no existe.`);
+                    res.status(404).send(`La Categoria de motocicleta con el ID ${idCategoria} no existe.`);
                 } else {
                     res.send("Los datos han sido borrados correctamente");
                 }

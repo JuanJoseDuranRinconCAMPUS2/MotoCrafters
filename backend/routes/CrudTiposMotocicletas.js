@@ -38,7 +38,7 @@ CTiposMotocicletas.post('/PostTiposMotocicletas', proxyPTiposM, (req,res)=>{
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al enviar la data`;
-                res.status(500).send(errorMessage, err.message);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessage}`);
             } else {
                 res.send("La data a sido enviada correctamente");
             }
@@ -58,7 +58,7 @@ CTiposMotocicletas.put('/PutTiposMotocicletas', proxyPutTiposM, (req,res)=>{
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al actualizar la data`;
-                res.status(500).send(errorMessage);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessage}`);
             } else {
                 if (data.affectedRows === 0) {
                     res.status(404).send(`el tipo de motocicleta con el ID ${idTipos} no existe.`);
@@ -81,7 +81,7 @@ CTiposMotocicletas.delete('/DeleteTiposMotocicletas', proxyDeleteTiposM, (req,re
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al borrar la data`;
-                res.status(500).send(errorMessage);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessage}`);
             } else {
                 if (data.affectedRows === 0) {
                     res.status(404).send(`el tipo de motocicleta con el ID ${idTipos} no existe.`);
