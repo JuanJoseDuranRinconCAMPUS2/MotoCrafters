@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import {proxyPColores, proxyPutColores, proxyDeleteColores}  from '../middleware/proxyColores.js';
 import {Router} from 'express';
 const CColores= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CColores.get('/GetColores', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CColores.post('/PostColores', (req,res)=>{
+CColores.post('/PostColores', proxyPColores,(req,res)=>{
     const valoresColores = Object.values(req.body);
     const coloresJSON = {};    
     valoresColores.forEach((color, index) => {
@@ -45,7 +45,7 @@ CColores.post('/PostColores', (req,res)=>{
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al enviar la data`;
-                res.status(500).send(errorMessage, err.message);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } else {
                 res.send("La data a sido enviada correctamente");
             }
@@ -56,7 +56,7 @@ CColores.post('/PostColores', (req,res)=>{
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CColores.put('/PutColores', (req,res)=>{
+CColores.put('/PutColores', proxyPutColores, (req,res)=>{
     const valoresColores = Object.values(req.body);
     const idColor = req.query.idColor;
     const coloresJSON = {};    
@@ -71,10 +71,10 @@ CColores.put('/PutColores', (req,res)=>{
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al actualizar la data`;
-                res.status(500).send(errorMessage);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } else {
                 if (data.affectedRows === 0) {
-                    res.status(404).send("El color con el ID especificado no existe.");
+                    res.status(404).send(`El color con el ID ${idColor} no existe.`);
                 } else {
                     res.send("Los datos han sido actualizados correctamente");
                 }
@@ -86,7 +86,7 @@ CColores.put('/PutColores', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CColores.delete('/DeleteColores', (req,res)=>{
+CColores.delete('/DeleteColores', proxyDeleteColores, (req,res)=>{
     const idColor = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Colores WHERE Cl_Id = ?;`,
@@ -94,10 +94,10 @@ CColores.delete('/DeleteColores', (req,res)=>{
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al borrar la data`;
-                res.status(500).send(errorMessage);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } else {
                 if (data.affectedRows === 0) {
-                    res.status(404).send("El color con el ID especificado no existe.");
+                    res.status(404).send(`El color con el ID ${idColor} no existe.`);
                 } else {
                     res.send("Los datos han sido borrados correctamente");
                 }
