@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import {proxyPMarca, proxyPutMarca, proxyDeleteMarca}  from '../middleware/proxyMarca.js';
 import {Router} from 'express';
 const CMarca= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CMarca.get('/GetMarcas', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMarca.post('/PostMarcas', (req,res)=>{
+CMarca.post('/PostMarcas', proxyPMarca, (req,res)=>{
     const { nombreMarca } = req.body;
     con.query(
         /*SQL*/`INSERT INTO Marca (Mrc_Nombre) VALUES(?);`,
@@ -39,7 +39,7 @@ CMarca.post('/PostMarcas', (req,res)=>{
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al enviar la data`;
-                res.status(500).send(errorMessage, err.message);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } else {
                 res.send("La data a sido enviada correctamente");
             }
@@ -50,7 +50,7 @@ CMarca.post('/PostMarcas', (req,res)=>{
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMarca.put('/PutMarcas', (req,res)=>{
+CMarca.put('/PutMarcas', proxyPutMarca, (req,res)=>{
     const idMarca = req.query.idMarca;
     const {nombreMarca} = req.body;
     con.query(
@@ -59,10 +59,10 @@ CMarca.put('/PutMarcas', (req,res)=>{
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al actualizar la data`;
-                res.status(500).send(errorMessage);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } else {
                 if (data.affectedRows === 0) {
-                    res.status(404).send("La marca con el ID especificado no existe.");
+                    res.status(404).send(`La marca con el ID ${idMarca} no existe.`);
                 } else {
                     res.send("Los datos han sido actualizados correctamente");
                 }
@@ -74,7 +74,7 @@ CMarca.put('/PutMarcas', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMarca.delete('/DeleteMarcas', (req,res)=>{
+CMarca.delete('/DeleteMarcas', proxyDeleteMarca, (req,res)=>{
     const idMarca = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Marca WHERE Mrc_Id = ?;`,
@@ -82,10 +82,10 @@ CMarca.delete('/DeleteMarcas', (req,res)=>{
         (err,data,fil)=>{
             if (err) {
                 const errorMessage = `Error al borrar la data`;
-                res.status(500).send(errorMessage);
+                res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } else {
                 if (data.affectedRows === 0) {
-                    res.status(404).send("La marca con el ID especificado no existe.");
+                    res.status(404).send(`La marca con el ID ${idMarca} no existe.`);
                 } else {
                     res.send("Los datos han sido borrados correctamente");
                 }
