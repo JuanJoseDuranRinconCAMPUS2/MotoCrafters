@@ -21,6 +21,7 @@ import CTipoIdentificacion from './routes/CrudTipoIdentificacion.js';
 import CGeneroIdentificacion from './routes/CrudGeneroIdentificacion.js';
 import CMecanico from './routes/CrudMecanicos.js';
 import CDuenoMotocicleta from './routes/CrudDueñoMotocicleta.js';
+import CEstadoMotocicleta from './routes/CrudEstadoMotocicleta.js';
 console.clear();
 dotnev.config();
 
@@ -50,6 +51,7 @@ MotoApi.use("/TipoIdentificacion", CTipoIdentificacion);
 MotoApi.use("/GeneroIdentificacion", CGeneroIdentificacion);
 MotoApi.use("/Mecanico", CMecanico);
 MotoApi.use("/DuenoMotocicleta", CDuenoMotocicleta);
+MotoApi.use("/EstadoMotocicleta", CEstadoMotocicleta);
 
 // ════════ ⋆★⋆ ════════
 
