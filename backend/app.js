@@ -16,6 +16,7 @@ import CInventario from './routes/CrudInventario.js';
 import CInvPiezasEngine from './routes/CrudInvPiezasEngine.js';
 import CInvPiezasFrame from './routes/CrudInvPiezasFrame.js';
 import CMotocicletasEnTaller from './routes/CrudMotocicletasEnTaller.js';
+import CEspecialidad from './routes/CrudEspecialidad.js';
 console.clear();
 dotnev.config();
 
@@ -40,6 +41,7 @@ MotoApi.use("/Inventario", CInventario);
 MotoApi.use("/InvPiezasEngine", CInvPiezasEngine);
 MotoApi.use("/InvPiezasFrame", CInvPiezasFrame);
 MotoApi.use("/MotocicletasEnTaller", CMotocicletasEnTaller);
+MotoApi.use("/Especialidad", CEspecialidad);
 // ════════ ⋆★⋆ ════════
 
 const config = JSON.parse(process.env.MY_CONFIG);
