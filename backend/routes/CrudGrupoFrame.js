@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import {proxyPGrupoFrame , proxyPutGrupoFrame, proxyDeleteGrupoFrame}  from '../middleware/proxyGrupoFrame.js';
 import {Router} from 'express';
 const CGrupoFrame= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CGrupoFrame.get('/GetGrupoFrame', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoFrame.post('/PostGrupoFrame', (req,res)=>{
+CGrupoFrame.post('/PostGrupoFrame', proxyPGrupoFrame, (req,res)=>{
     const { Gf_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Gf_Id FROM Grupo_Frame WHERE Gf_Id = ${Gf_Id};`,
@@ -66,7 +66,7 @@ function POSTGrupoFrame(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoFrame.put('/PutGrupoFrame', (req,res)=>{
+CGrupoFrame.put('/PutGrupoFrame', proxyPutGrupoFrame, (req,res)=>{
     const idGrupoF = req.query.idGrupoF;
     const grupoF = req.body;
     con.query(
@@ -78,7 +78,7 @@ CGrupoFrame.put('/PutGrupoFrame', (req,res)=>{
                 res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } else {
                 if (data.affectedRows === 0) {
-                    res.status(404).send(`La motocicleta con el ID ${idGrupoF} no existe.`);
+                    res.status(404).send(`El grupo Frame de la motocicleta con el ID ${idGrupoF} no existe.`);
                 } else {
                     res.send("Los datos han sido actualizados correctamente");
                 }
@@ -90,7 +90,7 @@ CGrupoFrame.put('/PutGrupoFrame', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoFrame.delete('/DeleteGrupoFrame', (req,res)=>{
+CGrupoFrame.delete('/DeleteGrupoFrame', proxyDeleteGrupoFrame, (req,res)=>{
     const idGrupoF = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Grupo_Frame WHERE Gf_Id = ?;`,
@@ -101,7 +101,7 @@ CGrupoFrame.delete('/DeleteGrupoFrame', (req,res)=>{
                 res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } else {
                 if (data.affectedRows === 0) {
-                    res.status(404).send(`La motocicleta con el ID ${idGrupoF} no existe.`);
+                    res.status(404).send(`El grupo Frame de la motocicleta con el ID ${idGrupoF} no existe.`);
                 } else {
                     res.send("Los datos han sido borrados correctamente");
                 }
