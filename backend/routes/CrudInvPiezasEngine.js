@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import {proxyPInvPiezasEngine , proxyPutInvPiezasEngine, proxyDeleteInvPiezasEngine}  from '../middleware/proxyInvPiezasEngine.js';
 import {Router} from 'express';
 const CInvPiezasEngine= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CInvPiezasEngine.get('/GetInvPiezasEngine', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInvPiezasEngine.post('/PostInvPiezasEngine', (req,res)=>{
+CInvPiezasEngine.post('/PostInvPiezasEngine', proxyPInvPiezasEngine, (req,res)=>{
     const { Ipe_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Ipe_Id FROM Inv_Piezas_Engine WHERE Ipe_Id = ${Ipe_Id};`,
@@ -66,7 +66,7 @@ function POSTInvPiezasEngine(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInvPiezasEngine.put('/PutInvPiezasEngine', (req,res)=>{
+CInvPiezasEngine.put('/PutInvPiezasEngine', proxyPutInvPiezasEngine, (req,res)=>{
     const idInvPiezasE = req.query.idInvPiezasE;
     const InvPiezasE = req.body;
     con.query(
@@ -90,7 +90,7 @@ CInvPiezasEngine.put('/PutInvPiezasEngine', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInvPiezasEngine.delete('/DeleteInvPiezasEngine', (req,res)=>{
+CInvPiezasEngine.delete('/DeleteInvPiezasEngine', proxyDeleteInvPiezasEngine, (req,res)=>{
     const idInvPiezasE = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Inv_Piezas_Engine WHERE Ipe_Id = ?;`,
