@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import {proxyPGrupoEngine , proxyPutGrupoEngine, proxyDeleteGrupoEngine}  from '../middleware/proxyGrupoEngine.js';
 import {Router} from 'express';
 const CGrupoEngine= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CGrupoEngine.get('/GetGrupoEngine', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoEngine.post('/PostGrupoEngine', (req,res)=>{
+CGrupoEngine.post('/PostGrupoEngine', proxyPGrupoEngine, (req,res)=>{
     const { Ge_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Ge_Id FROM Grupo_Engine WHERE Ge_Id = ${Ge_Id};`,
@@ -58,7 +58,7 @@ function POSTGrupoEngine(res,data) {
                 const errorMessage = `Error al enviar los datos`;
                 res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } 
-            res.send("La data se a enviado exitosamente");
+            res.send("La data se ha enviado exitosamente");
         }
     );
 }
@@ -66,7 +66,7 @@ function POSTGrupoEngine(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoEngine.put('/PutGrupoEngine', (req,res)=>{
+CGrupoEngine.put('/PutGrupoEngine', proxyPutGrupoEngine, (req,res)=>{
     const idGrupoE = req.query.idGrupoE;
     const grupoE = req.body;
     con.query(
@@ -90,7 +90,7 @@ CGrupoEngine.put('/PutGrupoEngine', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoEngine.delete('/DeleteGrupoEngine', (req,res)=>{
+CGrupoEngine.delete('/DeleteGrupoEngine', proxyDeleteGrupoEngine, (req,res)=>{
     const idGrupoF = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Grupo_Engine WHERE Ge_Id = ?;`,
