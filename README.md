@@ -299,7 +299,24 @@ Los datos han sido borrados correctamente
 
 Aqui encontraras el archivo con las colecciones de thunder usadas para ejecutar los endpoints de manera mas facil de este proyecto
 
-[Preciona Aqui Para Ir Directamente Al Archivo]()
+[Preciona Aqui Para Ir Directamente Al Archivo](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/backend/thunder/thunder-collection_MotoCrafters.json)
+
+## **🚀🎇 Importacion Archivo thunder🎇🚀**
+
+- Descarga el archivo thunder-collection_MotoCrafters.json en el link de arriba
+- Abre Thunder, ve a Collections y abre el menu
+
+![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/imagenes/instruccion1Thunder.png)
+
+- Haz Click donde dice "Import"
+
+  ![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/imagenes/instruccion2Thunder.png)
+
+- Selecciona el archivo thunder-collection_MotoCrafters.json
+
+- Y listo!!. Ya tendras todas las carpetas que contituyen los endPoints del proyecto. (Recuerda ejecutarlos de manera Descendente para evitar problemas con las llaves foraneas "esto si no tienes data generada en la base de datos")
+
+![](https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters/blob/main/imagenes/instruccion3Thunder.png)
 
 ## **🌌Contribución🌌**
 
