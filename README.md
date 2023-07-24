@@ -65,7 +65,7 @@ Creacion la base de datos con las respectivas tablas y relaciones ademas creacio
 4. ### Desarrollo del backend con Node.js y SQL:
 
    - [x] Configurar el entorno de desarrollo con Node.js y una base de datos SQL (con MySQL).
-   - [ ] Implementar las rutas y controladores necesarios para las operaciones de consulta, administración de partes y motos, y gestión de inventario.
+   - [x] Implementar las rutas y controladores necesarios para las operaciones de consulta, administración de partes y motos, y gestión de inventario.
    - [ ] Utilizar sentencias SQL para realizar consultas y actualizaciones en la base de datos.
 
 5. ### Desarrollo del frontend con Vue.js:
@@ -85,3 +85,228 @@ Creacion la base de datos con las respectivas tablas y relaciones ademas creacio
    - [ ] Realizar actualizaciones periódicas para mejorar la funcionalidad y la interfaz de usuario de la página web.
    - [ ] Escuchar los comentarios de los usuarios y realizar ajustes en base a sus necesidades y sugerencias.
    - [ ] Mantener la seguridad y el rendimiento de la página web a través de actualizaciones regulares y monitoreo constante.
+
+## 🥽🚀**Funcionalidades**🚀🥽
+
+## **⚙️🟣Requisitos Previos🟣⚙️**
+
+1. Node.js instalado en tu máquina.
+2. Una base de datos MySQL disponible.
+
+## **🍁🎉Instalación🎉**🍁
+
+1. Clona este repositorio en tu máquina: `git clone https://github.com/JuanJoseDuranRinconCAMPUS2/MotoCrafters`
+
+   (Recuerda que este repositorio es privado, solo las personas autorizadas pueden verlo)
+
+2. Accede al directorio del proyecto: `cd MotoCrafters`
+
+3. Accede a la carpeta de backend: `cd backend`
+
+4. Instala las dependencias:
+
+   **Dependencias usadas**
+
+   - Nodemon
+
+     `npm i -E -D nodemon`
+
+   - Dotenv
+
+     `npm i -E -D dotenv`
+
+   - Express
+
+     `npm i -E -D express`
+
+   - Mysql2
+
+     `npm i -E -D mysql2`
+
+   - Class-transformer
+
+     `npm i -E -D class-transformer`
+
+   - Reflect-metadata
+
+     `npm i -E -D reflect-metadata`
+
+   - Typescript
+
+     `npm i -E -D typescript`
+
+   - class-validator
+
+     `npm i -E -D class-validator`
+
+5. Accede al archivo de db_MotoCrafters_sql que esta dentro de la carpeta db: `db_MotoCrafters_sql`
+
+6. inicia el archivo y monta la base de datos en tu servidor (ejecuta cada una de los comandos SQL de manera Desendente).
+
+7. Para facilitar las consultas ejecuta de manera descente el archivo data_Catalogo que esta dentro de la carpeta db: `data_Catalogo` en ella encontraras data para alimentar la base de datos
+
+## **🏁🎆Configuración**🎆🏁
+
+1. Crea un archivo `.env` en el directorio raíz del proyecto.
+
+2. Dentro del archivo `.env`, define las siguientes variables de entorno:
+
+   - `host`: dirección del host de la base de datos.
+   - `user`: nombre de usuario de la base de datos.
+   - `password`: contraseña del usuario de la base de datos.
+   - `database`: nombre de la base de datos.
+   - `port`: dirección del puerto de la base de datos.
+   - `hostname`: dirección del puerto de la api.
+   - `port`: dirección del puerto de la api.
+
+   **Estructura:**
+
+   `MY_CONFIG={"hostname": "127.19.8.7", "port":5010}`
+
+   `MY_CONNECT={"host":"", "user":"", "database": "db_MotoCrafters_sql", "password": "", "port" : }`
+
+   Reemplaza `host`, `user`, `password` y `port` con los datos de tu base de datos MySQL.
+
+## **⚜️⚕️Uso⚕️⚜️**
+
+1. Entra en la carpeta backend  `cd backend`
+2. Inicia el servidor:
+3. `npm run dev`
+4. Accede a `http://127.19.8.7:5010` para interactuar con la API.
+5. Si no tiene la base de datos creada, use el archivo "db_consultorio_medico.sql" para crearla y si ya existe inyéctale los datos de las tablas del archivo "data.sql" para el buen funcionamiento de los endpoints
+
+***(A la base de datos se le adiciono una fila en el apartado de usuarios para las edades para poder realizar el endpoint de post de pacientes por edad)***
+
+## **💮🚍Rutas🚍💮**
+
+Accede a la API utilizando las siguientes rutas:
+
+## ✨/Colores✨
+
+**`GET /GetColores`**: El EndPoint `/GetColores` proporciona una lista de colores de las motocicletas. Este EndPoint se comunica con la base de datos para recuperar la información de los colores y los devuelve en orden forma de JSON.
+
+**Ejemplo de uso**
+
+```
+http://127.19.8.7:5010/Colores/GetColores
+```
+
+**Ejemplo Data de Salida**
+
+```json
+[
+  {
+    "Cl_Id": 1,
+    "Cl_DisColores": {
+      "Color1": "azul",
+      "Color2": "gris"
+    }
+  },
+  {
+    "Cl_Id": 2,
+    "Cl_DisColores": {
+      "Color1": "blanco",
+      "Color2": "gris",
+      "Color3": "Negro plata"
+    }
+  }
+]
+```
+
+**`POST /PostColores`**: El EndPoint `/PostColores` Envia una lista de colores proporcionada por el cliente y la envia directamente a la base de datos. Este EndPoint se comunica con la base de datos para enviar la información de los colores y devuelve un texto segun el resultado del envio.
+
+**Ejemplo de uso**
+
+```
+http://127.19.8.7:5010/Colores/PostColores
+```
+
+**Ejemplo Data de Entrada**
+
+```json
+{
+  "color1" : "rojo",
+  "color2" : "negro",
+  "color3" : "amarillo",
+  "color4" : "naranja"
+}
+```
+
+(cambia los valores a tu gusto pero recuerda respetar las keys y los tipo de data)
+
+**Ejemplo Data de Salida**
+
+```json
+La data a sido enviada correctamente
+```
+
+**`PUT/PutColores`**: El EndPoint `/PutColores` Envia una lista de colores proporcionada por el cliente y la actualiza la data con el id seleccionado directamente a la base de datos. Este EndPoint se comunica con la base de datos para enviar la información de los colores y devuelve un texto segun el resultado del envio.
+
+**Ejemplo de uso**
+
+```
+http://127.19.8.7:5010/Colores/PutColores?idColor=7
+```
+
+(el query es el numero identificador del dato que quieras actualizar)
+
+**Ejemplo Data de Entrada**
+
+```json
+{
+  "color1" : "naranja",
+  "color2" : "gris",
+  "color3" : "rojo",
+  "color4" : "azul"
+}
+```
+
+(cambia los valores a tu gusto pero recuerda respetar las keys y los tipo de data)
+
+**Ejemplo Data de Salida**
+
+```json
+Los datos han sido actualizados correctamente
+```
+
+**`DELETE/DeleteColores`**: El EndPoint `/DeleteColores` Envia un id de una lista de colores proporcionada por el cliente y borra la data con el id seleccionado directamente a la base de datos. Este EndPoint se comunica con la base de datos para enviar la información del id y devuelve un texto segun el resultado del envio.
+
+**Ejemplo de uso**
+
+```
+http://127.19.8.7:5010/Colores/DeleteColores
+```
+
+(el query es el numero identificador del dato que quieras actualizar)
+
+**Ejemplo Data de Entrada**
+
+```json
+{
+  "IdDelete" : 8
+}
+```
+
+(cambia los valores a tu gusto pero recuerda respetar las keys y los tipo de data)
+
+**Ejemplo Data de Salida**
+
+```json
+Los datos han sido borrados correctamente
+```
+
+## **🪄⚗️Archivo thunder⚗️🪄**
+
+Aqui encontraras el archivo con las colecciones de thunder usadas para ejecutar los endpoints de manera mas facil de este proyecto
+
+[Preciona Aqui Para Ir Directamente Al Archivo]()
+
+## **🌌Contribución🌌**
+
+Si deseas contribuir a este proyecto, siéntete libre de abrir una solicitud de extracción (pull request) o informar cualquier problema que encuentres.
+
+## **😶‍🌫️Licencias😶‍🌫️**
+
+Este proyecto está licenciado bajo la [Licencia MIT](https://github.com/JuanJoseDuranRinconCAMPUS2/bodegasNodeExpress/blob/main/LICENSE).
+
+¡Gracias por visitar mi proyecto!

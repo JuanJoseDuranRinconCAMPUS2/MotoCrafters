@@ -1,0 +1,2020 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "MotoCrafters",
+    "dateExported": "2023-07-24T03:08:12.355Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "55974d83-dfa9-4f6f-a638-7e1922c6c83a",
+            "name": "Colores",
+            "containerId": "",
+            "created": "2023-07-21T02:27:27.790Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "b2df8dde-6576-438b-8197-26331b996ecf",
+            "name": "Marcas",
+            "containerId": "",
+            "created": "2023-07-21T11:54:03.054Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "542ec5d9-e6ec-48ef-92a9-f425f2595466",
+            "name": "TiposMotocicletas",
+            "containerId": "",
+            "created": "2023-07-21T12:25:36.302Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "8f380b6a-f12a-4c9f-abe6-f268d7dc6f86",
+            "name": "CategoriasMotocicletas",
+            "containerId": "",
+            "created": "2023-07-21T13:20:35.518Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "f7d98fe3-bad2-48e0-885e-00e893934a3b",
+            "name": "Motocicletas",
+            "containerId": "",
+            "created": "2023-07-22T13:00:17.538Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "f6d74a77-d320-4497-bdbc-b68a615ccf5c",
+            "name": "GrupoEngine",
+            "containerId": "",
+            "created": "2023-07-22T19:24:12.429Z",
+            "sortNum": 55000
+        },
+        {
+            "_id": "ddb87359-b3ba-4395-8d15-15b2b54f9676",
+            "name": "GrupoFrame",
+            "containerId": "",
+            "created": "2023-07-22T16:13:05.724Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "39a34e16-9340-4399-80cf-a6e18b1e3567",
+            "name": "Catalogo",
+            "containerId": "",
+            "created": "2023-07-22T20:11:52.313Z",
+            "sortNum": 75000
+        },
+        {
+            "_id": "f90fcf41-1aef-4afa-84ca-c65614ef0ae9",
+            "name": "PiezasGrupoEngine",
+            "containerId": "",
+            "created": "2023-07-22T20:31:20.721Z",
+            "sortNum": 77500
+        },
+        {
+            "_id": "36921ebc-30d9-40ce-bc46-7fb08d64268c",
+            "name": "PiezasSubGrupoEngine ",
+            "containerId": "",
+            "created": "2023-07-22T21:40:32.135Z",
+            "sortNum": 78125
+        },
+        {
+            "_id": "54020cd2-2507-447d-88f8-745c55933858",
+            "name": "PiezasGrupoFrame ",
+            "containerId": "",
+            "created": "2023-07-22T21:24:27.141Z",
+            "sortNum": 78437.5
+        },
+        {
+            "_id": "0e329665-04cf-4a86-8947-9e00991e4d54",
+            "name": "PiezasSubGrupoFrame",
+            "containerId": "",
+            "created": "2023-07-22T21:51:18.980Z",
+            "sortNum": 78906.3
+        },
+        {
+            "_id": "54fa5cbf-295f-443f-9741-afc001cc805e",
+            "name": "Inventario",
+            "containerId": "",
+            "created": "2023-07-22T22:53:49.682Z",
+            "sortNum": 79375
+        },
+        {
+            "_id": "c45a3ae2-743b-4ec4-a464-b18deb1efbd9",
+            "name": "InvPiezasEngine",
+            "containerId": "",
+            "created": "2023-07-23T01:06:30.261Z",
+            "sortNum": 79687.5
+        },
+        {
+            "_id": "a10e8dbc-48c1-49b4-bb0f-4f34fe3604db",
+            "name": "InvPiezasFrame",
+            "containerId": "",
+            "created": "2023-07-23T01:59:00.955Z",
+            "sortNum": 79843.8
+        },
+        {
+            "_id": "8f41338c-b766-41ec-9065-7c0b3ef77dcf",
+            "name": "Especialidad",
+            "containerId": "",
+            "created": "2023-07-23T03:26:21.290Z",
+            "sortNum": 79882.9
+        },
+        {
+            "_id": "b18fb6ae-f3ec-4231-a44e-48ae26620f52",
+            "name": "TipoIdentificacion",
+            "containerId": "",
+            "created": "2023-07-23T12:53:58.382Z",
+            "sortNum": 79902.4
+        },
+        {
+            "_id": "12e63172-9cad-433a-8481-62b2c86cc66b",
+            "name": "GeneroIdentificacion",
+            "containerId": "",
+            "created": "2023-07-23T13:14:09.545Z",
+            "sortNum": 79912.1
+        },
+        {
+            "_id": "64feca42-7e79-4056-bbc1-b32f85f9b863",
+            "name": "EstadoMotocicleta",
+            "containerId": "",
+            "created": "2023-07-23T14:53:12.074Z",
+            "sortNum": 79912.8
+        },
+        {
+            "_id": "bf2b6f02-aba5-405f-88bf-b09d12887964",
+            "name": "DueñoMotocicleta",
+            "containerId": "",
+            "created": "2023-07-23T14:01:19.351Z",
+            "sortNum": 79913.4
+        },
+        {
+            "_id": "d90cca72-415b-471d-8a12-5bb447ac9e84",
+            "name": "MotocicletasEnTaller",
+            "containerId": "",
+            "created": "2023-07-23T03:07:49.246Z",
+            "sortNum": 79914.6
+        },
+        {
+            "_id": "9505342d-91e4-41ce-8c11-c216e141b065",
+            "name": "Mecanico",
+            "containerId": "",
+            "created": "2023-07-23T13:37:17.706Z",
+            "sortNum": 79917
+        },
+        {
+            "_id": "0247514a-e4f7-4911-b028-c9d7edde5cf9",
+            "name": "HistorialMotocicleta",
+            "containerId": "",
+            "created": "2023-07-23T15:36:24.719Z",
+            "sortNum": 84919.4
+        },
+        {
+            "_id": "ac37eef5-c56c-4472-bda8-500448755c2a",
+            "name": "PLANTILLA",
+            "containerId": "",
+            "created": "2023-07-22T20:11:50.202Z",
+            "sortNum": 89921.9
+        }
+    ],
+    "requests": [
+        {
+            "_id": "562f6b22-ce59-4368-91a3-01a716e793a5",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "55974d83-dfa9-4f6f-a638-7e1922c6c83a",
+            "name": "GetColores",
+            "url": "http://127.19.8.7:5010/Colores/GetColores",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-21T02:27:40.321Z",
+            "modified": "2023-07-21T02:29:38.822Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e63beb00-079b-4959-a856-dfb22a852bf2",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "55974d83-dfa9-4f6f-a638-7e1922c6c83a",
+            "name": "PostColores",
+            "url": "http://127.19.8.7:5010/Colores/PostColores",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-07-21T02:37:30.008Z",
+            "modified": "2023-07-23T22:21:29.058Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"color1\" : \"rojo\",\n  \"color2\" : \"negro\",\n  \"color3\" : \"amarillo\",\n  \"color4\" : \"naranja\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2a72eb43-f1d7-420e-91af-13b68aa578b2",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "55974d83-dfa9-4f6f-a638-7e1922c6c83a",
+            "name": "PutColores",
+            "url": "http://127.19.8.7:5010/Colores/PutColores?idColor=7",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-07-21T03:34:49.889Z",
+            "modified": "2023-07-23T22:26:52.719Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idColor",
+                    "value": "7",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"color1\" : \"naranja\",\n  \"color2\" : \"gris\",\n  \"color3\" : \"rojo\",\n  \"color4\" : \"azul\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ea950f1a-7ebb-41f1-ba50-7a94d643d074",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "55974d83-dfa9-4f6f-a638-7e1922c6c83a",
+            "name": "DeleteColores",
+            "url": "http://127.19.8.7:5010/Colores/DeleteColores",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-07-21T03:49:55.886Z",
+            "modified": "2023-07-23T21:35:27.635Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 8\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7d9830da-b478-47b8-a43f-228ee24522c6",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "b2df8dde-6576-438b-8197-26331b996ecf",
+            "name": "GetMarcas",
+            "url": "http://127.19.8.7:5010/Marcas/GetMarcas",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-21T11:54:11.392Z",
+            "modified": "2023-07-21T12:01:43.459Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "02db40b1-9de5-464e-b760-926e1feaf0b3",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "542ec5d9-e6ec-48ef-92a9-f425f2595466",
+            "name": "GetTiposMotocicletas",
+            "url": "http://127.19.8.7:5010/TiposMotocicletas/GetTiposMotocicletas",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-21T12:25:36.302Z",
+            "modified": "2023-07-21T12:29:46.434Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "709a2bc4-9042-423a-9914-f50f4585b257",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "8f380b6a-f12a-4c9f-abe6-f268d7dc6f86",
+            "name": "GetCategoriasMotocicletas",
+            "url": "http://127.19.8.7:5010/CategoriasMotocicletas/GetCategoriasMotocicletas",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-21T13:20:35.518Z",
+            "modified": "2023-07-21T13:36:48.487Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "08d7bbaa-17a4-4f04-8aa7-8ccae71b1c4e",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f7d98fe3-bad2-48e0-885e-00e893934a3b",
+            "name": "GetMotocicletas",
+            "url": "http://127.19.8.7:5010/Motocicletas/GetMotocicletas",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T13:00:17.538Z",
+            "modified": "2023-07-22T13:29:38.926Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f6708a59-ec56-46c3-925f-9f660f48e2a5",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "ddb87359-b3ba-4395-8d15-15b2b54f9676",
+            "name": "GetGrupoFrame",
+            "url": "http://127.19.8.7:5010/GrupoFrame/GetGrupoFrame",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T16:13:05.724Z",
+            "modified": "2023-07-22T17:13:16.656Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "aacd5cd8-4aa5-4f32-b3ce-ba846c5e5c1c",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f6d74a77-d320-4497-bdbc-b68a615ccf5c",
+            "name": "GetGrupoEngine",
+            "url": "http://127.19.8.7:5010/GrupoEngine/GetGrupoEngine",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T19:24:12.429Z",
+            "modified": "2023-07-22T19:55:43.430Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "549055cf-7acd-4d5f-9860-dae512d72fb5",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "ac37eef5-c56c-4472-bda8-500448755c2a",
+            "name": "Get",
+            "url": "http://127.19.8.7:5010/GrupoEngine/GetGrupoEngine",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T20:11:50.202Z",
+            "modified": "2023-07-22T20:11:50.202Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "72d0f379-6b81-400e-979f-e78b628c26f8",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "39a34e16-9340-4399-80cf-a6e18b1e3567",
+            "name": "GetCatalogo",
+            "url": "http://127.19.8.7:5010/Catalogo/GetCatalogo",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T20:11:52.313Z",
+            "modified": "2023-07-22T20:13:41.407Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e25a9cf0-9874-49f3-8b23-1598cb264689",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f90fcf41-1aef-4afa-84ca-c65614ef0ae9",
+            "name": "GetPiezasGrupoEngine",
+            "url": "http://127.19.8.7:5010/PiezasGrupoEngine/GetPiezasGrupoEngine",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T20:31:20.721Z",
+            "modified": "2023-07-22T20:32:38.831Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d9840a95-4764-4fa0-bb6c-7cabeacba1a7",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "54020cd2-2507-447d-88f8-745c55933858",
+            "name": "GetPiezasGrupoFrame",
+            "url": "http://127.19.8.7:5010/PiezasGrupoFrame/GetPiezasGrupoFrame",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T21:24:27.141Z",
+            "modified": "2023-07-22T21:27:37.471Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4a207b39-abff-4c8f-b871-698aba2ac4fa",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "36921ebc-30d9-40ce-bc46-7fb08d64268c",
+            "name": "GetSubPiezasGrupoEngine",
+            "url": "http://127.19.8.7:5010/SubPiezasGrupoEngine/GetSubPiezasGrupoEngine",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T21:40:32.135Z",
+            "modified": "2023-07-22T21:41:58.575Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8f1db1ce-a138-4794-8119-0bb9b8c6c1b2",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "0e329665-04cf-4a86-8947-9e00991e4d54",
+            "name": "GetSubPiezasGrupoFrame",
+            "url": "http://127.19.8.7:5010/SubPiezasGrupoFrame/GetSubPiezasGrupoFrame",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T21:51:18.980Z",
+            "modified": "2023-07-22T21:55:33.931Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ddaecd00-1e0d-459a-bf45-12962b5cbabe",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "54fa5cbf-295f-443f-9741-afc001cc805e",
+            "name": "GetInventario",
+            "url": "http://127.19.8.7:5010/Inventario/GetInventario",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-22T22:53:49.684Z",
+            "modified": "2023-07-22T22:54:53.145Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "634a899e-22a8-4751-b6af-afff3b2babc9",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "c45a3ae2-743b-4ec4-a464-b18deb1efbd9",
+            "name": "GetInvPiezasEngine",
+            "url": "http://127.19.8.7:5010/InvPiezasEngine/GetInvPiezasEngine",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T01:06:30.261Z",
+            "modified": "2023-07-23T01:20:27.970Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5a19ef4e-8768-48e4-8b1a-0f02170dd175",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "a10e8dbc-48c1-49b4-bb0f-4f34fe3604db",
+            "name": "GetInvPiezasFrame",
+            "url": "http://127.19.8.7:5010/InvPiezasFrame/GetInvPiezasFrame",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T01:59:00.955Z",
+            "modified": "2023-07-23T01:59:23.042Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "27b8f808-e7e1-4c49-be49-f5d2159fda59",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "d90cca72-415b-471d-8a12-5bb447ac9e84",
+            "name": "GetMotocicletasEnTaller",
+            "url": "http://127.19.8.7:5010/MotocicletasEnTaller/GetMotocicletasEnTaller",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T03:07:49.246Z",
+            "modified": "2023-07-23T03:14:09.351Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dffc37a1-faf9-41df-b7ea-4b654b143a09",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "8f41338c-b766-41ec-9065-7c0b3ef77dcf",
+            "name": "GetEspecialidad",
+            "url": "http://127.19.8.7:5010/Especialidad/GetEspecialidad",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T03:26:21.290Z",
+            "modified": "2023-07-23T12:03:48.941Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f2b5d237-76d6-46fb-92ab-85c4ffccdbee",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "b18fb6ae-f3ec-4231-a44e-48ae26620f52",
+            "name": "GetTipoIdentificacion",
+            "url": "http://127.19.8.7:5010/TipoIdentificacion/GetTipoIdentificacion",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T12:53:58.383Z",
+            "modified": "2023-07-23T12:54:35.954Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e5c82726-4a58-49f5-a2d6-c25565319f15",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "12e63172-9cad-433a-8481-62b2c86cc66b",
+            "name": "GetGeneroIdentificacion",
+            "url": "http://127.19.8.7:5010/GeneroIdentificacion/GetGeneroIdentificacion",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T13:14:09.545Z",
+            "modified": "2023-07-23T13:14:45.799Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "30006ef3-e6c7-45ec-975f-6d05bd27f5d4",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "9505342d-91e4-41ce-8c11-c216e141b065",
+            "name": "GetMecanico",
+            "url": "http://127.19.8.7:5010/Mecanico/GetMecanico",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T13:37:17.706Z",
+            "modified": "2023-07-23T13:38:15.035Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "724da1f7-38d7-4db0-a780-9df4660cde9c",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "bf2b6f02-aba5-405f-88bf-b09d12887964",
+            "name": "GetDueñoMotocicleta",
+            "url": "http://127.19.8.7:5010/DuenoMotocicleta/GetDuenoMotocicleta",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T14:01:19.351Z",
+            "modified": "2023-07-23T14:03:40.371Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d36ea53f-1456-44dc-b1e5-b1654f09359f",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "64feca42-7e79-4056-bbc1-b32f85f9b863",
+            "name": "GetEstadoMotocicleta",
+            "url": "http://127.19.8.7:5010/EstadoMotocicleta/GetEstadoMotocicleta",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T14:53:12.074Z",
+            "modified": "2023-07-23T14:55:11.243Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9105b19a-e02b-4604-9390-67c425758e50",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "0247514a-e4f7-4911-b028-c9d7edde5cf9",
+            "name": "GetHistorialMotocicleta",
+            "url": "http://127.19.8.7:5010/HistorialMotocicleta/GetHistorialMotocicleta",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-23T15:36:24.720Z",
+            "modified": "2023-07-23T15:36:57.710Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "43c31e1e-9749-40af-99f2-7fd1351fb32d",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "b2df8dde-6576-438b-8197-26331b996ecf",
+            "name": "PostMarcas",
+            "url": "http://127.19.8.7:5010/Marcas/PostMarcas",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-21T12:01:23.971Z",
+            "modified": "2023-07-23T21:12:30.949Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreMarca\" : \"Wolf\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ca306bff-6601-4c39-aa89-10e8c7541190",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "542ec5d9-e6ec-48ef-92a9-f425f2595466",
+            "name": "PostTiposMotocicletas",
+            "url": "http://127.19.8.7:5010/TiposMotocicletas/PostTiposMotocicletas",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-21T12:25:36.303Z",
+            "modified": "2023-07-23T20:54:18.663Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreTipo\" : \"Señoritera¨*\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "06044aca-75eb-4dd1-9caa-8799689facea",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "8f380b6a-f12a-4c9f-abe6-f268d7dc6f86",
+            "name": "PostCategoriasMotocicletas",
+            "url": "http://127.19.8.7:5010/CategoriasMotocicletas/PostCategoriasMotocicletas",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-21T13:20:35.519Z",
+            "modified": "2023-07-23T19:04:23.704Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCategoria\" : \"Alta Gam3a\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "47085bb0-3103-48d2-ad01-10bf058ae7f5",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f7d98fe3-bad2-48e0-885e-00e893934a3b",
+            "name": "PostMotocicletas",
+            "url": "http://127.19.8.7:5010/Motocicletas/PostMotocicletas",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T13:00:17.539Z",
+            "modified": "2023-07-23T23:27:42.836Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": " {\n  \"Mto_Id\": 3,\n  \"Mto_Marca\": 4,\n  \"Mto_Nom_Modelo\": \"KYMCO AGILITY GO\",\n  \"Mto_Año_Modelo\": \"2024\",\n  \"Mto_Cilindraje\": \"124.6 cc\",\n  \"Mto_Potencia\": \"9.3 HP @ 7500 rpm\",\n  \"Mto_Torque\": \"9.1 Nm @ 6500 rpm\",\n  \"Mto_Colores\": 5,\n  \"Mto_Tipo\": 4,\n  \"Mto_Categoria\": 2,\n  \"Mto_Url_imagen\": \"https://auteco.vteximg.com.br/arquivos/ids/286326/moto_kymco_agility_go125_gris_2022_foto01.png?v=638167606505400000\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bc2d3c75-57e4-44cd-96e8-68e863a0a312",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "ddb87359-b3ba-4395-8d15-15b2b54f9676",
+            "name": "PostGrupoFrame",
+            "url": "http://127.19.8.7:5010/GrupoFrame/PostGrupoFrame",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T16:13:05.725Z",
+            "modified": "2023-07-24T00:50:52.000Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Gf_Id\": -1,\n    \"Gf_Descripcion\": \"Grupo de piezas Frame Correspondientes a la motocicleta 123123412\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6d840aa4-ec4e-4f75-8bda-206f25643b1f",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f6d74a77-d320-4497-bdbc-b68a615ccf5c",
+            "name": "PostGrupoEngine",
+            "url": "http://127.19.8.7:5010/GrupoEngine/PostGrupoEngine",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T19:24:12.430Z",
+            "modified": "2023-07-24T00:38:06.530Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Ge_Id\": 1,\n    \"Ge_Descripcion\": \"Grupo de piezas Frame Correspondientes a la motocicleta KYMCO TWIST CITy\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a8c7fb37-8e99-496d-9e28-543c79cef0e2",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "ac37eef5-c56c-4472-bda8-500448755c2a",
+            "name": "Post",
+            "url": "http://127.19.8.7:5010/GrupoEngine/PostGrupoEngine",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T20:11:50.203Z",
+            "modified": "2023-07-22T20:11:50.202Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Ge_Id\": 1,\n    \"Ge_Descripcion\": \"Grupo de piezas Frame Correspondientes a la motocicleta KYMCO TWIST CIT\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "af3cdc23-d615-4d4e-8dfb-0a028fec7e08",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "39a34e16-9340-4399-80cf-a6e18b1e3567",
+            "name": "PostCatalogo",
+            "url": "http://127.19.8.7:5010/Catalogo/PostCatalogo",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T20:11:52.314Z",
+            "modified": "2023-07-24T00:11:36.714Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Ctl_Id\": 3,\n  \"Ctl_Motocicleta\": 1,\n  \"Ctl_Modelo\": \"KYMCO TWIST\",\n  \"Ctl_Descripcion\": \"Catalogo de la motocicleta KYMCO TWIST\",\n  \"Ctl_Version\": \"Agosto 2022\",\n  \"Ctl_Grupo_Engine\": 1,\n  \"Ctl_Grupo_Frame\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "86befc39-5bcb-45d6-9f77-f7178caacb23",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f90fcf41-1aef-4afa-84ca-c65614ef0ae9",
+            "name": "PostPiezasGrupoEngine",
+            "url": "http://127.19.8.7:5010/PiezasGrupoEngine/PostPiezasGrupoEngine",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T20:31:20.722Z",
+            "modified": "2023-07-24T01:18:17.606Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Pge_Id\": -1,\n  \"Pge_No\": \"E10\",\n  \"Pge_Descripcion\": \"Motobyte\",\n  \"Pge_Diagrama\": \"https://i.ibb.co/pR4rNkS/CARCASAS.png\",\n  \"Pge_Url_Imagen\": \"URL_IMAGEN_E10\",\n  \"Pge_Grupo_Ref\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d0ea8c22-1bbe-48b9-8d1d-a78e78ba774d",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "54020cd2-2507-447d-88f8-745c55933858",
+            "name": "PostPiezasGrupoFrame",
+            "url": "http://127.19.8.7:5010/PiezasGrupoFrame/PostPiezasGrupoFrame",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T21:24:27.142Z",
+            "modified": "2023-07-24T01:31:35.007Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Pgf_Id\": 22,\n  \"Pgf_No\": \"F24\",\n  \"Pgf_Descripcion\": \"CALCOMANIAS Y ACCESORIOS TWIST CITY 20\",\n  \"Pgf_Diagrama\": \"DIAGRAMA_F26\",\n  \"Pgf_Url_Imagen\": \"URL_IMAGEN_F25\",\n  \"Pgf_Grupo_Ref\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "abc2bcb8-f899-4c00-b499-318c84ad06ac",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "36921ebc-30d9-40ce-bc46-7fb08d64268c",
+            "name": "PostSubPiezasGrupoEngine",
+            "url": "http://127.19.8.7:5010/SubPiezasGrupoEngine/PostSubPiezasGrupoEngine",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T21:40:32.136Z",
+            "modified": "2023-07-22T21:44:52.424Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Sge_Id\": 33,\n  \"Sge_Ref_No\": \"2334234\",\n  \"Sge_Pieza_No\": \"96100-2334234-00\",\n  \"Sge_Descripcion\": \"Rodamiento Bolas 2334234\",\n  \"Sge_Url_Imagen\": \"Url_Imagen_2334234\",\n  \"Sge_Grupo_Piezas\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cd1f93f7-7a36-4663-87d5-8ce7378476e5",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "0e329665-04cf-4a86-8947-9e00991e4d54",
+            "name": "PostSubPiezasGrupoFrame",
+            "url": "http://127.19.8.7:5010/SubPiezasGrupoFrame/PostSubPiezasGrupoFrame",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T21:51:18.982Z",
+            "modified": "2023-07-24T02:11:04.473Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Sgf_Id\": -33,\n  \"Sgf_Ref_No\": \"2334234\",\n  \"Sgf_Pieza_No\": \"96100-2334234-00\",\n  \"Sgf_Descripcion\": \"Rodamiento Bolas 2334234\",\n  \"Sgf_Url_Imagen\": \"Url_Imagen_2334234\",\n  \"Sgf_Grupo_Piezas\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8d06ba31-8da1-4cb7-856f-78c3b80288e0",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "54fa5cbf-295f-443f-9741-afc001cc805e",
+            "name": "PostInventario",
+            "url": "http://127.19.8.7:5010/Inventario/PostInventario",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-22T22:53:49.685Z",
+            "modified": "2023-07-24T02:25:27.176Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Inv_Id\": -2,\n    \"Inv_Descripcion\": \"Inventario de piezas del taller autorizado de AUTECO MOBILITY\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b269587a-b2b3-41a4-8f9c-7a036f2106dd",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "c45a3ae2-743b-4ec4-a464-b18deb1efbd9",
+            "name": "PostInvPiezasEngine",
+            "url": "http://127.19.8.7:5010/InvPiezasEngine/PostInvPiezasEngine",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T01:06:30.262Z",
+            "modified": "2023-07-24T02:50:37.878Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Ipe_Id\" : 1,\n  \"Ipe_Pieza_Id\": 5,\n  \"Ipe_Fecha_Entrada\": \"2023-07-21\",\n  \"Ipe_Cantidad\": 50,\n  \"Ipe_Observaciones\": \"Piezas referentes al carburador de la moto\",\n  \"Ipe_Inventario\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0d95b401-743a-4da4-ab91-77bc5cd890c2",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "a10e8dbc-48c1-49b4-bb0f-4f34fe3604db",
+            "name": "PostInvPiezasFrame",
+            "url": "http://127.19.8.7:5010/InvPiezasFrame/PostInvPiezasFrame",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T01:59:00.956Z",
+            "modified": "2023-07-23T02:20:09.727Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Ipf_Id\" : 8,\n  \"Ipf_Pieza_Id\": 4,\n  \"Ipf_Fecha_Entrada\": \"2023-12-22\",\n  \"Ipf_Cantidad\": 50,\n  \"Ipf_Observaciones\": \"Piezas referentes al bombillo de la motocicleta\",\n  \"Ipf_Inventario\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "606239d5-86e3-455d-91e7-817504ee110a",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "d90cca72-415b-471d-8a12-5bb447ac9e84",
+            "name": "PostMotocicletasEnTaller",
+            "url": "http://127.19.8.7:5010/MotocicletasEnTaller/PostMotocicletasEnTaller",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T03:07:49.247Z",
+            "modified": "2023-07-23T15:21:03.578Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"Met_Id\" : 2,\r\n  \"Met_Marca\": 1,\r\n  \"Met_Nom_Modelo\": \"VICTORY ZONTES 155 U\",\r\n  \"Met_Año_Modelo\": \"2023\",\r\n  \"Met_Num_Chasis\": \"ABC1233123\",\r\n  \"Met_Kilometraje\": \"8000\",\r\n  \"Met_Color\": \"rojo\",\r\n  \"Met_Dueño\": 1,\r\n  \"Met_Estado\": 2,\r\n  \"Met_Tipo\": 6,\r\n  \"Met_Categoria\": 1,\r\n  \"Met_Fecha_Registro\": \"2023-03-18\",\r\n  \"Met_Url_imagen\": \"Url_imagen_VICTORY ZONTES 155 U\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "75b426d9-e043-4f44-aa82-0cece60794a8",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "8f41338c-b766-41ec-9065-7c0b3ef77dcf",
+            "name": "PostEspecialidad",
+            "url": "http://127.19.8.7:5010/Especialidad/PostEspecialidad",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T03:26:21.291Z",
+            "modified": "2023-07-23T12:39:17.687Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Esp_Id\": 1,\n    \"Esp_Nombre\": \"Diagnóstico y Solución de Problemas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5217867d-fc67-42a7-b257-e8f759de024d",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "b18fb6ae-f3ec-4231-a44e-48ae26620f52",
+            "name": "PostTipoIdentificacion",
+            "url": "http://127.19.8.7:5010/TipoIdentificacion/PostTipoIdentificacion",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T12:53:58.384Z",
+            "modified": "2023-07-23T13:02:09.688Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Td_Id\": 1,\n    \"Td_Nombre\": \"Registro Civil\",\n    \"Td_Abreviatura\": \"RC\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "63ac3aa3-f1fa-455f-8f60-f2c5532ed211",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "12e63172-9cad-433a-8481-62b2c86cc66b",
+            "name": "PostGeneroIdentificacion",
+            "url": "http://127.19.8.7:5010/GeneroIdentificacion/PostGeneroIdentificacion",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T13:14:09.546Z",
+            "modified": "2023-07-23T13:23:53.082Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Gt_Id\": 1,\n    \"Gt_Nombre\": \"Otro\",\n    \"Gt_Abreviatura\": \"Otro\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7375c4c7-f24a-4c84-8d8a-a0a57f285d7c",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "9505342d-91e4-41ce-8c11-c216e141b065",
+            "name": "PostMecanico",
+            "url": "http://127.19.8.7:5010/Mecanico/PostMecanico",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T13:37:17.707Z",
+            "modified": "2023-07-23T13:41:51.862Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"Mec_Id\" : 1,\r\n  \"Mec_Nombre\": \"Juan Pérez\",\r\n  \"Mec_Especialidad\": 1,\r\n  \"Mec_Tipo_Iden\": 2,\r\n  \"Mec_Identificacion\": \"645231\",\r\n  \"Mec_Telefono\": \"3156546\",\r\n  \"Mec_Email\": \"juan@gmail.com\",\r\n  \"Mec_Direccion\": \"Calle 11, 23-23\",\r\n  \"Mec_Genero\": 1,\r\n  \"Mec_Fecha_Registro\": \"2023-07-18\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2807d45b-2b34-427c-a6ca-d994d6488cd9",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "bf2b6f02-aba5-405f-88bf-b09d12887964",
+            "name": "PostDueñoMotocicleta",
+            "url": "http://127.19.8.7:5010/DuenoMotocicleta/PostDuenoMotocicleta",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T14:01:19.352Z",
+            "modified": "2023-07-23T14:05:35.072Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Dm_Id\" : 1,\n  \"Dm_Nombre\": \"William Ortega\",\n  \"Dm_Tipo_Iden\": 2,\n  \"Dm_Identificacion\": \"213123\",\n  \"Dm_Telefono\": \"3156546\",\n  \"Dm_Email\": \"henry@gmail.com\",\n  \"Dm_Direccion\": \"Calle 11, 23-23\",\n  \"Dm_Genero\": 1,\n  \"Dm_Fecha_Registro\": \"2023-07-18\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "899bbb4d-f2f8-4a00-b3a4-e1c3f1104a9c",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "64feca42-7e79-4056-bbc1-b32f85f9b863",
+            "name": "PostEstadoMotocicleta",
+            "url": "http://127.19.8.7:5010/EstadoMotocicleta/PostEstadoMotocicleta",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T14:53:12.075Z",
+            "modified": "2023-07-23T15:01:32.336Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Em_Id\": 1,\n    \"Em_Nombre\": \"Entregada\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3c0e5103-b708-419c-ae1e-5e9cfe35b175",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "0247514a-e4f7-4911-b028-c9d7edde5cf9",
+            "name": "PostHistorialMotocicleta",
+            "url": "http://127.19.8.7:5010/HistorialMotocicleta/PostHistorialMotocicleta",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-23T15:36:24.721Z",
+            "modified": "2023-07-23T15:40:15.827Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": " {\r\n  \"Hm_Id\" : 1,\r\n  \"Hm_MecanicoAsig\": 2,\r\n  \"Hm_Descripcion\": \"Reparación del motor\",\r\n  \"Hm_Fecha_Ingreso\": \"2023-07-18\",\r\n  \"Hm_Fecha_Salida\": \"2023-09-20\",\r\n  \"Hm_Descripcion_Problema\": \"Motor no enciende\",\r\n  \"Hm_Descripcion_Reparacion\": \"Reemplazo de bujías y limpieza del carburador\",\r\n  \"Hm_Observaciones\": \"Cliente satisfecho con el servicio\",\r\n  \"Hm_Motocicleta\": 1\r\n }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d081ceb1-f5f7-4642-a147-d048218b2450",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "b2df8dde-6576-438b-8197-26331b996ecf",
+            "name": "PutMarcas",
+            "url": "http://127.19.8.7:5010/Marcas/PutMarcas?idMarca=7",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-21T12:04:32.598Z",
+            "modified": "2023-07-23T21:16:25.604Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idMarca",
+                    "value": "7",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreMarca\" : \"starker\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ca4eabb4-bc5b-4395-8dad-e9731e9fb4b1",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "542ec5d9-e6ec-48ef-92a9-f425f2595466",
+            "name": "PutTiposMotocicletas",
+            "url": "http://127.19.8.7:5010/TiposMotocicletas/PutTiposMotocicletas?idTipos=10",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-21T12:25:36.304Z",
+            "modified": "2023-07-23T20:55:23.206Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idTipos",
+                    "value": "10",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreTipo\" : \"Heritage\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5ea69e39-884f-4bc9-ab0a-eef94e7f7c6a",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "8f380b6a-f12a-4c9f-abe6-f268d7dc6f86",
+            "name": "PutCategoriasMotocicletas",
+            "url": "http://127.19.8.7:5010/CategoriasMotocicletas/PutCategoriasMotocicletas",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-21T13:20:35.520Z",
+            "modified": "2023-07-23T20:32:48.847Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCategoria\" : \"Alta Gama\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b5ae45f8-a6b6-412e-b967-f22580cbfb57",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f7d98fe3-bad2-48e0-885e-00e893934a3b",
+            "name": "PutMotocicletas",
+            "url": "http://127.19.8.7:5010/Motocicletas/PutMotocicletas?idMotocicleta=3",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T13:00:17.540Z",
+            "modified": "2023-07-23T23:34:12.594Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idMotocicleta",
+                    "value": "3",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": " {\n  \"Mto_Id\": 3,\n  \"Mto_Marca\": 4,\n  \"Mto_Nom_Modelo\": \"KYMCO AGILITY GO\",\n  \"Mto_Año_Modelo\": \"2024\",\n  \"Mto_Cilindraje\": \"124.6 cc\",\n  \"Mto_Potencia\": \"9.3 HP @ 7500 rpm\",\n  \"Mto_Torque\": \"9.1 Nm @ 6500 rpm\",\n  \"Mto_Colores\": 5,\n  \"Mto_Tipo\": 4,\n  \"Mto_Categoria\": 2,\n  \"Mto_Url_imagen\": \"https://auteco.vteximg.com.br/arquivos/ids/286326/moto_kymco_agility_go125_gris_2022_foto01.png?v=638167606505400000\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2548f347-79f5-4381-b6e7-0d48a1f2d3a4",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "ddb87359-b3ba-4395-8d15-15b2b54f9676",
+            "name": "PutGrupoFrame",
+            "url": "http://127.19.8.7:5010/GrupoFrame/PutGrupoFrame?idGrupoF=2",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T16:13:05.726Z",
+            "modified": "2023-07-22T17:27:15.856Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idGrupoF",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Gf_Descripcion\": \"Grupo de piezas Frame Correspondientes a la motocicleta KYMCO TWIST CITY\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "abe04484-dadc-457d-a21b-4df80a5886c9",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f6d74a77-d320-4497-bdbc-b68a615ccf5c",
+            "name": "PutGrupoEngine",
+            "url": "http://127.19.8.7:5010/GrupoEngine/PutGrupoEngine?idGrupoE=4",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T19:24:12.431Z",
+            "modified": "2023-07-24T00:37:55.635Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idGrupoE",
+                    "value": "4",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Ge_Descripcion\": \"Grupo de piezas Frame Correspondientes a la motocicleta KYMCO TWIST CITY\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "81c8d4d0-9928-4315-804b-1a29520f89ec",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "ac37eef5-c56c-4472-bda8-500448755c2a",
+            "name": "Put",
+            "url": "http://127.19.8.7:5010/GrupoEngine/PutGrupoEngine?idGrupoE=2",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T20:11:50.204Z",
+            "modified": "2023-07-22T20:11:50.202Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idGrupoE",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Ge_Descripcion\": \"Grupo de piezas Frame Correspondientes a la motocicleta KYMCO TWIST CITY\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "aa028d8f-1640-4336-84e8-483d5a968fba",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "39a34e16-9340-4399-80cf-a6e18b1e3567",
+            "name": "PutGrupoEngine",
+            "url": "http://127.19.8.7:5010/Catalogo/PutCatalogo?idCatalogo=2",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T20:11:52.315Z",
+            "modified": "2023-07-22T20:18:08.966Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idCatalogo",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Ctl_Motocicleta\": 1,\n  \"Ctl_Modelo\": \"KYMCO TWIST\",\n  \"Ctl_Descripcion\": \"Catalogo de la motocicleta KYMCO TWIST CITY\",\n  \"Ctl_Version\": \"Agosto 2022\",\n  \"Ctl_Grupo_Engine\": 1,\n  \"Ctl_Grupo_Frame\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c196460d-ec2e-46e6-8891-62433476fa32",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f90fcf41-1aef-4afa-84ca-c65614ef0ae9",
+            "name": "PutPiezasGrupoEngine",
+            "url": "http://127.19.8.7:5010/PiezasGrupoEngine/PutPiezasGrupoEngine?idPiezasGrupoEngine=9",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T20:31:20.723Z",
+            "modified": "2023-07-24T01:19:28.836Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idPiezasGrupoEngine",
+                    "value": "9",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Pge_No\": \"E01\",\n  \"Pge_Descripcion\": \"Transmisor\",\n  \"Pge_Diagrama\": \"https://i.ibb.co/pR4rNkS/CARCASAS.png\",\n  \"Pge_Url_Imagen\": \"URL_IMAGEN_E0111\",\n  \"Pge_Grupo_Ref\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5dc8a42c-92e8-4e11-a97f-1e70e0d6d304",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "54020cd2-2507-447d-88f8-745c55933858",
+            "name": "PutPiezasGrupoFrame",
+            "url": "http://127.19.8.7:5010/PiezasGrupoFrame/PutPiezasGrupoFrame?idPiezasGrupoFrame=25",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T21:24:27.143Z",
+            "modified": "2023-07-24T01:33:57.497Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idPiezasGrupoFrame",
+                    "value": "25",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Pgf_No\": \"F24\",\n  \"Pgf_Descripcion\": \"CALCOMANIAS Y ACCESORIOS TWIST CITY\",\n  \"Pgf_Diagrama\": \"DIAGRAMA_F24\",\n  \"Pgf_Url_Imagen\": \"URL_IMAGEN_F24\",\n  \"Pgf_Grupo_Ref\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d4c9c8e2-ec74-4102-afc5-4c473dc798c1",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "36921ebc-30d9-40ce-bc46-7fb08d64268c",
+            "name": "PutSubPiezasGrupoEngine",
+            "url": "http://127.19.8.7:5010/SubPiezasGrupoEngine/PutSubPiezasGrupoEngine?idSubPiezasGrupoEngine=35",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T21:40:32.137Z",
+            "modified": "2023-07-24T02:01:19.573Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idSubPiezasGrupoEngine",
+                    "value": "35",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Sge_Ref_No\": \"444\",\n  \"Sge_Pieza_No\": \"96100-44-00\",\n  \"Sge_Descripcion\": \"Rodamiento Bolas 4\",\n  \"Sge_Url_Imagen\": \"4\",\n  \"Sge_Grupo_Piezas\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8dc5145f-ae37-4bdc-9169-5df38df21209",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "0e329665-04cf-4a86-8947-9e00991e4d54",
+            "name": "PutSubPiezasGrupoFrame",
+            "url": "http://127.19.8.7:5010/SubPiezasGrupoFrame/PutSubPiezasGrupoFrame?idSubPiezasGrupoFrame=33",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T21:51:18.983Z",
+            "modified": "2023-07-24T02:10:47.599Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idSubPiezasGrupoFrame",
+                    "value": "33",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Sgf_Ref_No\": \"18291-KEBE\",\n  \"Sgf_Pieza_No\": \"18291-KEBE-C00\",\n  \"Sgf_Descripcion\": \"Buje\",\n  \"Sgf_Url_Imagen\": \"Url_Imagen_34\",\n  \"Sgf_Grupo_Piezas\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5778d28f-0fe8-4846-8182-162876ebf9cf",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "54fa5cbf-295f-443f-9741-afc001cc805e",
+            "name": "PutInventario",
+            "url": "http://127.19.8.7:5010/Inventario/PutInventario?idInventario=2",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-22T22:53:49.686Z",
+            "modified": "2023-07-22T23:05:06.801Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idInventario",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Inv_Descripcion\": \"Grupo de piezas Frame Correspondientes a la motocicleta KYMCO TWIST CITY\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "261f64a1-b4c3-4e6b-8b4a-d83ce1370790",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "c45a3ae2-743b-4ec4-a464-b18deb1efbd9",
+            "name": "PutInvPiezasEngine",
+            "url": "http://127.19.8.7:5010/InvPiezasEngine/PutInvPiezasEngine?idInvPiezasE=3",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T01:06:30.263Z",
+            "modified": "2023-07-24T02:56:10.597Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idInvPiezasE",
+                    "value": "3",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Ipe_Pieza_Id\": 5,\n  \"Ipe_Fecha_Entrada\": \"2023-07-21\",\n  \"Ipe_Cantidad\": 34423,\n  \"Ipe_Observaciones\": \"Piezas referentes al carburador de la moto\",\n  \"Ipe_Inventario\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ccdccae4-51d6-4704-a4fd-cb17ee123eb5",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "a10e8dbc-48c1-49b4-bb0f-4f34fe3604db",
+            "name": "PutInvPiezasFrame",
+            "url": "http://127.19.8.7:5010/InvPiezasFrame/PutInvPiezasFrame?idInvPiezasF=11",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T01:59:00.957Z",
+            "modified": "2023-07-23T02:22:44.034Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idInvPiezasF",
+                    "value": "11",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Ipf_Pieza_Id\": 5,\n  \"Ipf_Fecha_Entrada\": \"2023-07-21\",\n  \"Ipf_Cantidad\": 34423,\n  \"Ipf_Observaciones\": \"Piezas referentes al carburador de la moto\",\n  \"Ipf_Inventario\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7f883c6e-845d-4eae-b38b-a6198356a75b",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "d90cca72-415b-471d-8a12-5bb447ac9e84",
+            "name": "PutMotocicletasEnTaller",
+            "url": "http://127.19.8.7:5010/MotocicletasEnTaller/PutMotocicletasEnTaller?idMotocicletasEnTaller=2",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T03:07:49.248Z",
+            "modified": "2023-07-23T15:23:15.121Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idMotocicletasEnTaller",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"Met_Marca\": 1,\r\n  \"Met_Nom_Modelo\": \"VICTORY ZONTES 310 M\",\r\n  \"Met_Año_Modelo\": \"2023\",\r\n  \"Met_Num_Chasis\": \"ABC1233123\",\r\n  \"Met_Kilometraje\": \"8000\",\r\n  \"Met_Color\": \"rojo\",\r\n  \"Met_Dueño\": 1,\r\n  \"Met_Estado\": 2,\r\n  \"Met_Tipo\": 6,\r\n  \"Met_Categoria\": 1,\r\n  \"Met_Fecha_Registro\": \"2023-03-18\",\r\n  \"Met_Url_imagen\": \"Url_imagen_VICTORY ZONTES 310 M\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2bf95cbb-2425-446b-bbb1-760d433c2a11",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "8f41338c-b766-41ec-9065-7c0b3ef77dcf",
+            "name": "PutEspecialidad",
+            "url": "http://127.19.8.7:5010/Especialidad/PutEspecialidad?idEspecialidad=4",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T03:26:21.292Z",
+            "modified": "2023-07-23T12:40:32.680Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idEspecialidad",
+                    "value": "4",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Esp_Nombre\": \"Reparaciones de Chasis\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d4d2848e-b9be-4d81-8f44-149f53d20b60",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "b18fb6ae-f3ec-4231-a44e-48ae26620f52",
+            "name": "PutTipoIdentificacion",
+            "url": "http://127.19.8.7:5010/TipoIdentificacion/PutTipoIdentificacion?idTipoIdentificacion=5",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T12:53:58.385Z",
+            "modified": "2023-07-23T13:02:49.556Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idTipoIdentificacion",
+                    "value": "5",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"Td_Nombre\": \"Cedula\",\n    \"Td_Abreviatura\": \"CC\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "417a74ca-22b6-4185-9a90-524369572139",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "12e63172-9cad-433a-8481-62b2c86cc66b",
+            "name": "PutGeneroIdentificacion",
+            "url": "http://127.19.8.7:5010/GeneroIdentificacion/PutGeneroIdentificacion?idGeneroIdentificacion=5",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T13:14:09.547Z",
+            "modified": "2023-07-23T13:24:02.664Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idGeneroIdentificacion",
+                    "value": "5",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"Gt_Nombre\": \"Cedula\",\n   \"Gt_Abreviatura\": \"CC\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b9673fd5-5ae4-49d7-8ffa-fe2c266a856e",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "9505342d-91e4-41ce-8c11-c216e141b065",
+            "name": "PutMecanico",
+            "url": "http://127.19.8.7:5010/Mecanico/PutMecanico?idMecanico=2",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T13:37:17.708Z",
+            "modified": "2023-07-23T13:49:31.527Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idMecanico",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"Mec_Nombre\": \"maria Pérez\",\r\n  \"Mec_Especialidad\": 3,\r\n  \"Mec_Tipo_Iden\": 1,\r\n  \"Mec_Identificacion\": \"23333\",\r\n  \"Mec_Telefono\": \"1233123\",\r\n  \"Mec_Email\": \"maria@gmail.com\",\r\n  \"Mec_Direccion\": \"Calle 23, 11-23\",\r\n  \"Mec_Genero\": 2,\r\n  \"Mec_Fecha_Registro\": \"2023-12-18\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6b68e7dd-bd16-41ef-abbc-6e9aa31d74d6",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "bf2b6f02-aba5-405f-88bf-b09d12887964",
+            "name": "PutDueñoMotocicleta",
+            "url": "http://127.19.8.7:5010/DuenoMotocicleta/PutDuenoMotocicleta?idDueñoMotocicleta=2",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T14:01:19.353Z",
+            "modified": "2023-07-23T14:05:51.040Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idDueñoMotocicleta",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Dm_Nombre\": \"maria Pérez\",\n  \"Dm_Tipo_Iden\": 1,\n  \"Dm_Identificacion\": \"23333\",\n  \"Dm_Telefono\": \"1233123\",\n  \"Dm_Email\": \"maria@gmail.com\",\n  \"Dm_Direccion\": \"Calle 23, 11-23\",\n  \"Dm_Genero\": 2,\n  \"Dm_Fecha_Registro\": \"2023-12-18\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "eae28047-cfce-4798-a4d9-7f51e09d6cdb",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "64feca42-7e79-4056-bbc1-b32f85f9b863",
+            "name": "PutEstadoMotocicleta",
+            "url": "http://127.19.8.7:5010/EstadoMotocicleta/PutEstadoMotocicleta?idEstadoMotocicleta=4",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T14:53:12.076Z",
+            "modified": "2023-07-23T15:02:17.033Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idEstadoMotocicleta",
+                    "value": "4",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"Em_Nombre\": \"Perdida\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "26a5ff82-0dbe-401f-8895-13b0c42e79ce",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "0247514a-e4f7-4911-b028-c9d7edde5cf9",
+            "name": "PutHistorialMotocicleta",
+            "url": "http://127.19.8.7:5010/HistorialMotocicleta/PutHistorialMotocicleta?idHistorialMotocicleta=2",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-07-23T15:36:24.722Z",
+            "modified": "2023-07-23T15:41:07.843Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "idHistorialMotocicleta",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": " {\r\n  \"Hm_Id\" : 2,\r\n  \"Hm_MecanicoAsig\": 1,\r\n  \"Hm_Descripcion\": \"Restauracion del motor\",\r\n  \"Hm_Fecha_Ingreso\": \"2023-02-18\",\r\n  \"Hm_Fecha_Salida\": \"2023-09-20\",\r\n  \"Hm_Descripcion_Problema\": \"Motor quemado\",\r\n  \"Hm_Descripcion_Reparacion\": \"Reemplazo del motor\",\r\n  \"Hm_Observaciones\": \"Cliente satisfecho con el servicio\",\r\n  \"Hm_Motocicleta\": 1\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a2867c0d-d2f4-4112-9d29-09cfba4aad6e",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "b2df8dde-6576-438b-8197-26331b996ecf",
+            "name": "DeleteMarcas",
+            "url": "http://127.19.8.7:5010/Marcas/DeleteMarcas",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-21T12:04:45.025Z",
+            "modified": "2023-07-23T21:17:32.292Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 7\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "192d2fae-6ae9-455a-9b30-a41e27e935d5",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "542ec5d9-e6ec-48ef-92a9-f425f2595466",
+            "name": "DeleteTiposMotocicletas",
+            "url": "http://127.19.8.7:5010/TiposMotocicletas/DeleteTiposMotocicletas",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-21T12:25:36.305Z",
+            "modified": "2023-07-23T20:56:34.904Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : -10\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "45e65a84-a75e-4e06-9f2e-a8e827da1345",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "8f380b6a-f12a-4c9f-abe6-f268d7dc6f86",
+            "name": "DeleteCategoriasMotocicletas",
+            "url": "http://127.19.8.7:5010/CategoriasMotocicletas/DeleteCategoriasMotocicletas",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-21T13:20:35.521Z",
+            "modified": "2023-07-23T20:41:59.367Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 5\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b4b5430d-d50c-47df-8366-068a59f7bd36",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f7d98fe3-bad2-48e0-885e-00e893934a3b",
+            "name": "DeleteMotocicletas",
+            "url": "http://127.19.8.7:5010/Motocicletas/DeleteMotocicletas",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T13:00:17.542Z",
+            "modified": "2023-07-23T23:34:37.938Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 13\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3ede95e6-2727-4870-9795-75992762e884",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "ddb87359-b3ba-4395-8d15-15b2b54f9676",
+            "name": "DeleteGrupoFrame",
+            "url": "http://127.19.8.7:5010/GrupoFrame/DeleteGrupoFrame",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T16:13:05.727Z",
+            "modified": "2023-07-24T00:51:24.576Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 4\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8f0d10a6-6ce5-48c2-912c-15f77b9ae9d0",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f6d74a77-d320-4497-bdbc-b68a615ccf5c",
+            "name": "DeleteGrupoEngine",
+            "url": "http://127.19.8.7:5010/GrupoEngine/DeleteGrupoEngine",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T19:24:12.432Z",
+            "modified": "2023-07-24T00:38:17.854Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 5\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dffab126-d3e4-4b17-8887-1b30b3a48a67",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "ac37eef5-c56c-4472-bda8-500448755c2a",
+            "name": "Delete",
+            "url": "http://127.19.8.7:5010/GrupoEngine/DeleteGrupoEngine",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T20:11:50.205Z",
+            "modified": "2023-07-22T20:11:50.202Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8c807473-a54b-495d-8c4d-f50273d8667d",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "39a34e16-9340-4399-80cf-a6e18b1e3567",
+            "name": "DeleteCatalogo",
+            "url": "http://127.19.8.7:5010/Catalogo/DeleteCatalogo",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T20:11:52.316Z",
+            "modified": "2023-07-24T00:13:17.666Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 34\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0cbf89f6-062f-46f8-b0e7-d04b8a089974",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "f90fcf41-1aef-4afa-84ca-c65614ef0ae9",
+            "name": "DeletePiezasGrupoEngine",
+            "url": "http://127.19.8.7:5010/PiezasGrupoEngine/DeletePiezasGrupoEngine",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T20:31:20.724Z",
+            "modified": "2023-07-24T01:19:42.874Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : -9\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e2c3038c-e62d-40b4-beb8-df00d9924625",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "54020cd2-2507-447d-88f8-745c55933858",
+            "name": "DeletePiezasGrupoFrame",
+            "url": "http://127.19.8.7:5010/PiezasGrupoFrame/DeletePiezasGrupoFrame",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T21:24:27.144Z",
+            "modified": "2023-07-24T01:34:06.677Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 25\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7b7de1af-74ab-40cb-b5b7-ec27fcedc2e3",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "36921ebc-30d9-40ce-bc46-7fb08d64268c",
+            "name": "DeleteSubPiezasGrupoEngine",
+            "url": "http://127.19.8.7:5010/SubPiezasGrupoEngine/DeleteSubPiezasGrupoEngine",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T21:40:32.138Z",
+            "modified": "2023-07-24T02:01:38.917Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 35\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c875ac57-2240-414c-9a38-168d557784a3",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "0e329665-04cf-4a86-8947-9e00991e4d54",
+            "name": "DeleteSubPiezasGrupoEngine",
+            "url": "http://127.19.8.7:5010/SubPiezasGrupoFrame/DeleteSubPiezasGrupoFrame",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T21:51:18.984Z",
+            "modified": "2023-07-22T22:02:46.329Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 33\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d54910d0-c396-4ab2-8476-042ed4cce050",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "54fa5cbf-295f-443f-9741-afc001cc805e",
+            "name": "DeleteInventario",
+            "url": "http://127.19.8.7:5010/Inventario/DeleteInventario",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-22T22:53:49.687Z",
+            "modified": "2023-07-24T02:26:34.024Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b476780f-7b6c-4a2b-abdc-364c27ad7ecb",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "c45a3ae2-743b-4ec4-a464-b18deb1efbd9",
+            "name": "DeleteInvPiezasEngine",
+            "url": "http://127.19.8.7:5010/InvPiezasEngine/DeleteInvPiezasEngine",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T01:06:30.264Z",
+            "modified": "2023-07-24T02:59:57.880Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "52a636c2-8a5d-4c47-992e-133b7bc01281",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "a10e8dbc-48c1-49b4-bb0f-4f34fe3604db",
+            "name": "DeleteInvPiezasFrame",
+            "url": "http://127.19.8.7:5010/InvPiezasFrame/DeleteInvPiezasFrame",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T01:59:00.958Z",
+            "modified": "2023-07-23T02:23:14.818Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 7\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "684e750e-2b9b-4b7e-848c-b2ed44f6ab3f",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "d90cca72-415b-471d-8a12-5bb447ac9e84",
+            "name": "DeleteMotocicletasEnTaller",
+            "url": "http://127.19.8.7:5010/MotocicletasEnTaller/DeleteMotocicletasEnTaller",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T03:07:49.249Z",
+            "modified": "2023-07-23T15:23:29.697Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d28c3093-eaaa-4159-9efa-377e55a6b913",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "8f41338c-b766-41ec-9065-7c0b3ef77dcf",
+            "name": "DeleteEspecialidad",
+            "url": "http://127.19.8.7:5010/Especialidad/DeleteEspecialidad",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T03:26:21.293Z",
+            "modified": "2023-07-23T12:41:13.368Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 5\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4a617083-52ca-47a2-b8b4-32e1dd9a55f7",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "b18fb6ae-f3ec-4231-a44e-48ae26620f52",
+            "name": "DeleteTipoIdentificacion",
+            "url": "http://127.19.8.7:5010/TipoIdentificacion/DeleteTipoIdentificacion",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T12:53:58.386Z",
+            "modified": "2023-07-23T13:03:47.620Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 5\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6dd2eaa1-713c-4662-889d-8f424f9b1c31",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "12e63172-9cad-433a-8481-62b2c86cc66b",
+            "name": "DeleteGeneroIdentificacion",
+            "url": "http://127.19.8.7:5010/GeneroIdentificacion/DeleteGeneroIdentificacion",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T13:14:09.548Z",
+            "modified": "2023-07-23T13:24:07.099Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 5\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9af5b654-a0f5-4088-8498-f3b6c7755183",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "9505342d-91e4-41ce-8c11-c216e141b065",
+            "name": "DeleteMecanico",
+            "url": "http://127.19.8.7:5010/Mecanico/DeleteMecanico",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T13:37:17.709Z",
+            "modified": "2023-07-23T13:49:38.523Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "eba5a563-5f3f-4b1f-afbb-002026378283",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "bf2b6f02-aba5-405f-88bf-b09d12887964",
+            "name": "DeleteDueñoMotocicleta",
+            "url": "http://127.19.8.7:5010/DuenoMotocicleta/DeleteDuenoMotocicleta",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T14:01:19.354Z",
+            "modified": "2023-07-23T14:05:59.128Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d4c29a2d-e4cd-42b8-b551-93dea24354b5",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "64feca42-7e79-4056-bbc1-b32f85f9b863",
+            "name": "DeleteEstadoMotocicleta",
+            "url": "http://127.19.8.7:5010/EstadoMotocicleta/DeleteEstadoMotocicleta",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T14:53:12.077Z",
+            "modified": "2023-07-23T15:02:34.570Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 4\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "420aab10-5fde-495b-8b5b-08470ab21689",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "0247514a-e4f7-4911-b028-c9d7edde5cf9",
+            "name": "DeleteHistorialMotocicleta",
+            "url": "http://127.19.8.7:5010/HistorialMotocicleta/DeleteHistorialMotocicleta",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-07-23T15:36:24.723Z",
+            "modified": "2023-07-23T15:41:54.520Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IdDelete\" : 2\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
