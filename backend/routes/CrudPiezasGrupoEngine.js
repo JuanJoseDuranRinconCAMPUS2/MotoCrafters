@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import {proxyPPiezasGrupoEngine , proxyPutPiezasGrupoEngine, proxyDeletePiezasGrupoEngine}  from '../middleware/proxyPiezasGrupoEngine.js';
 import {Router} from 'express';
 const CPiezasGrupoEngine= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CPiezasGrupoEngine.get('/GetPiezasGrupoEngine', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoEngine.post('/PostPiezasGrupoEngine', (req,res)=>{
+CPiezasGrupoEngine.post('/PostPiezasGrupoEngine', proxyPPiezasGrupoEngine, (req,res)=>{
     const { Pge_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Pge_Id FROM Piezas_Grupo_Engine WHERE Pge_Id = ${Pge_Id};`,
@@ -66,7 +66,7 @@ function POSTPiezasGrupoEngine(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoEngine.put('/PutPiezasGrupoEngine', (req,res)=>{
+CPiezasGrupoEngine.put('/PutPiezasGrupoEngine', proxyPutPiezasGrupoEngine, (req,res)=>{
     const idPiezasGrupoEngine = req.query.idPiezasGrupoEngine;
     const PiezasGrupoEngine = req.body;
     con.query(
@@ -90,7 +90,7 @@ CPiezasGrupoEngine.put('/PutPiezasGrupoEngine', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoEngine.delete('/DeletePiezasGrupoEngine', (req,res)=>{
+CPiezasGrupoEngine.delete('/DeletePiezasGrupoEngine', proxyDeletePiezasGrupoEngine, (req,res)=>{
     const idPiezasGrupoEngine = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Piezas_Grupo_Engine WHERE Pge_Id = ?;`,
