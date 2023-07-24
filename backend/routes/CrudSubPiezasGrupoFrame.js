@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import {proxyPSubPiezasGrupoFrame , proxyPutSubPiezasGrupoFrame, proxyDeleteSubPiezasGrupoFrame}  from '../middleware/proxySubPiezasGrupoFrame.js';
 import {Router} from 'express';
 const CSubPiezasGrupoFrame= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CSubPiezasGrupoFrame.get('/GetSubPiezasGrupoFrame', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoFrame.post('/PostSubPiezasGrupoFrame', (req,res)=>{
+CSubPiezasGrupoFrame.post('/PostSubPiezasGrupoFrame', proxyPSubPiezasGrupoFrame, (req,res)=>{
     const { Sgf_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Sgf_Id FROM SubPiezas_Grupo_Frame WHERE Sgf_Id = ${Sgf_Id};`,
@@ -66,7 +66,7 @@ function POSTSubPiezasGrupoEngine(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoFrame.put('/PutSubPiezasGrupoFrame', (req,res)=>{
+CSubPiezasGrupoFrame.put('/PutSubPiezasGrupoFrame', proxyPutSubPiezasGrupoFrame, (req,res)=>{
     const idSubPiezasGrupoFrame = req.query.idSubPiezasGrupoFrame;
     const SubPiezasGrupoFrame = req.body;
     con.query(
@@ -90,7 +90,7 @@ CSubPiezasGrupoFrame.put('/PutSubPiezasGrupoFrame', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoFrame.delete('/DeleteSubPiezasGrupoFrame', (req,res)=>{
+CSubPiezasGrupoFrame.delete('/DeleteSubPiezasGrupoFrame', proxyDeleteSubPiezasGrupoFrame, (req,res)=>{
     const idSubPiezasGrupoFrame = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM SubPiezas_Grupo_Frame WHERE Sgf_Id = ?;`,
