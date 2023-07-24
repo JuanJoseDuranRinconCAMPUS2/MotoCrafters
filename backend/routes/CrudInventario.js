@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import {proxyPInventario , proxyPutInventario, proxyDeleteInventario}  from '../middleware/proxyInventario.js';
 import {Router} from 'express';
 const CInventario= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CInventario.get('/GetInventario', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInventario.post('/PostInventario', (req,res)=>{
+CInventario.post('/PostInventario', proxyPInventario, (req,res)=>{
     const { Inv_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Inv_Id FROM Inventario WHERE Inv_Id = ${Inv_Id};`,
@@ -58,7 +58,7 @@ function POSTInventario(res,data) {
                 const errorMessage = `Error al enviar los datos`;
                 res.status(500).send(`${errorMessage} error encontrado: ${err.sqlMessag}`);
             } 
-            res.send("La data se a enviado exitosamente");
+            res.send("La data se ha enviado exitosamente");
         }
     );
 }
@@ -66,7 +66,7 @@ function POSTInventario(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInventario.put('/PutInventario', (req,res)=>{
+CInventario.put('/PutInventario', proxyPutInventario, (req,res)=>{
     const idInventario = req.query.idInventario;
     const Inventario = req.body;
     con.query(
@@ -90,7 +90,7 @@ CInventario.put('/PutInventario', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInventario.delete('/DeleteInventario', (req,res)=>{
+CInventario.delete('/DeleteInventario', proxyDeleteInventario, (req,res)=>{
     const idInventario = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Inventario WHERE Inv_Id = ?;`,
