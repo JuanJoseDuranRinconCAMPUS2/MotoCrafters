@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import { proxyPEspecialidad, proxyPutEspecialidad, proxyDeleteEspecialidad } from '../middleware/proxyEspecialidad.js';
 import {Router} from 'express';
 const CEspecialidad= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CEspecialidad.get('/GetEspecialidad', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEspecialidad.post('/PostEspecialidad', (req,res)=>{
+CEspecialidad.post('/PostEspecialidad', proxyPEspecialidad, (req,res)=>{
     const { Esp_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Esp_Id FROM Especialidad WHERE Esp_Id = ${Esp_Id};`,
@@ -64,7 +64,7 @@ function POSTEspecialidad(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEspecialidad.put('/PutEspecialidad', (req,res)=>{
+CEspecialidad.put('/PutEspecialidad', proxyPutEspecialidad, (req,res)=>{
     const idEspecialidad = req.query.idEspecialidad;
     const Especialidad = req.body;
     con.query(
@@ -88,7 +88,7 @@ CEspecialidad.put('/PutEspecialidad', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEspecialidad.delete('/DeleteEspecialidad', (req,res)=>{
+CEspecialidad.delete('/DeleteEspecialidad', proxyDeleteEspecialidad, (req,res)=>{
     const idEspecialidad = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Especialidad WHERE Esp_Id = ?;`,
