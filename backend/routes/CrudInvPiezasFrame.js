@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import { proxyPInvPiezasFrame, proxyPutInvPiezasFrame, proxyDeleteInvPiezasFrame } from '../middleware/proxyInvPiezasFrame.js';
 import {Router} from 'express';
 const CInvPiezasFrame= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CInvPiezasFrame.get('/GetInvPiezasFrame', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInvPiezasFrame.post('/PostInvPiezasFrame', (req,res)=>{
+CInvPiezasFrame.post('/PostInvPiezasFrame', proxyPInvPiezasFrame, (req,res)=>{
     const { Ipf_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Ipf_Id FROM Inv_Piezas_Frame WHERE Ipf_Id = ${Ipf_Id};`,
@@ -65,7 +65,7 @@ function POSTInvPiezasFrame(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInvPiezasFrame.put('/PutInvPiezasFrame', (req,res)=>{
+CInvPiezasFrame.put('/PutInvPiezasFrame', proxyPutInvPiezasFrame, (req,res)=>{
     const idInvPiezasF = req.query.idInvPiezasF;
     const InvPiezasF = req.body;
     con.query(
@@ -89,7 +89,7 @@ CInvPiezasFrame.put('/PutInvPiezasFrame', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInvPiezasFrame.delete('/DeleteInvPiezasFrame', (req,res)=>{
+CInvPiezasFrame.delete('/DeleteInvPiezasFrame', proxyDeleteInvPiezasFrame, (req,res)=>{
     const idInvPiezasF = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Inv_Piezas_Frame WHERE Ipf_Id = ?;`,
