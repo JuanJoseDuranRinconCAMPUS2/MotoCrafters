@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPColores, proxyPutColores, proxyDeleteColores}  from '../middleware/proxyColores.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CColores= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CColores.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CColores.get('/GetColores', (req,res)=>{
+CColores.get('/GetColores', validation,(req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Colores`,
         (err,data,fil)=>{

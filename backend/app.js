@@ -1,5 +1,7 @@
 import dotnev from 'dotenv';
 import express from 'express';
+import cookieParser from 'cookie-parser';
+
 import CColores from './routes/CrudColores.js';
 import CMarca from './routes/CrudMarca.js';
 import CTiposMotocicletas from './routes/CrudTiposMotocicletas.js';
@@ -23,11 +25,20 @@ import CMecanico from './routes/CrudMecanicos.js';
 import CDuenoMotocicleta from './routes/CrudDueñoMotocicleta.js';
 import CEstadoMotocicleta from './routes/CrudEstadoMotocicleta.js';
 import CHistorialMotocicleta from './routes/CrudHistorialMotocicleta.js';
+import CreacionUsu from './routes/RegistroClient.js';
 console.clear();
 dotnev.config();
 
 const MotoApi = express();
 MotoApi.use(express.json());
+MotoApi.use(cookieParser());
+
+// Endpoint De Creacion de la token para el usuario
+// ════════ ⋆★⋆ ════════
+
+MotoApi.use("/Registro", CreacionUsu);
+
+// ════════ ⋆★⋆ ════════
 
 // Endpoint con los cruds de las tablas de la base de datos
 // ════════ ⋆★⋆ ════════

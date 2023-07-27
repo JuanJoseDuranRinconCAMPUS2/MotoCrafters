@@ -1,9 +1,16 @@
 {
     "client": "Thunder Client",
     "collectionName": "MotoCrafters",
-    "dateExported": "2023-07-24T03:08:12.355Z",
+    "dateExported": "2023-07-27T04:29:11.101Z",
     "version": "1.1",
     "folders": [
+        {
+            "_id": "0edad9b6-b281-4034-b075-e99e7bffeab4",
+            "name": "USUARIO",
+            "containerId": "",
+            "created": "2023-07-27T04:04:00.390Z",
+            "sortNum": 5000
+        },
         {
             "_id": "55974d83-dfa9-4f6f-a638-7e1922c6c83a",
             "name": "Colores",
@@ -241,12 +248,12 @@
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2023-07-21T03:49:55.886Z",
-            "modified": "2023-07-23T21:35:27.635Z",
+            "modified": "2023-07-24T03:26:13.715Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 8\n}",
+                "raw": "{\n  \"IdDelete\" : 7\n}",
                 "form": []
             },
             "tests": []
@@ -848,7 +855,7 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-07-23T01:59:00.956Z",
-            "modified": "2023-07-23T02:20:09.727Z",
+            "modified": "2023-07-26T18:20:36.754Z",
             "headers": [],
             "params": [],
             "body": {
@@ -867,12 +874,12 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-07-23T03:07:49.247Z",
-            "modified": "2023-07-23T15:21:03.578Z",
+            "modified": "2023-07-27T02:25:38.552Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\r\n  \"Met_Id\" : 2,\r\n  \"Met_Marca\": 1,\r\n  \"Met_Nom_Modelo\": \"VICTORY ZONTES 155 U\",\r\n  \"Met_Año_Modelo\": \"2023\",\r\n  \"Met_Num_Chasis\": \"ABC1233123\",\r\n  \"Met_Kilometraje\": \"8000\",\r\n  \"Met_Color\": \"rojo\",\r\n  \"Met_Dueño\": 1,\r\n  \"Met_Estado\": 2,\r\n  \"Met_Tipo\": 6,\r\n  \"Met_Categoria\": 1,\r\n  \"Met_Fecha_Registro\": \"2023-03-18\",\r\n  \"Met_Url_imagen\": \"Url_imagen_VICTORY ZONTES 155 U\"\r\n}",
+                "raw": "{\n  \"Met_Id\" : 2,\n  \"Met_Marca\": 1,\n  \"Met_Nom_Modelo\": \"VICTORY ZONTES 155 U\",\n  \"Met_Año_Modelo\": \"2023f\",\n  \"Met_Num_Chasis\": \"ABC1233123\",\n  \"Met_Kilometraje\": \"8000\",\n  \"Met_Color\": \"rojo\",\n  \"Met_Dueño\": 1,\n  \"Met_Estado\": 2,\n  \"Met_Tipo\": 6,\n  \"Met_Categoria\": 1,\n  \"Met_Fecha_Registro\": \"2023-03-18\",\n  \"Met_Url_imagen\": \"Url_imagen_VICTORY ZONTES 155 U\"\n}",
                 "form": []
             },
             "tests": []
@@ -886,12 +893,12 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-07-23T03:26:21.291Z",
-            "modified": "2023-07-23T12:39:17.687Z",
+            "modified": "2023-07-26T22:59:37.143Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"Esp_Id\": 1,\n    \"Esp_Nombre\": \"Diagnóstico y Solución de Problemas\"\n}",
+                "raw": "{\n    \"Esp_Id\": 1,\n    \"Esp_Nombre\": \"Diagnostico y Solucion de Problemas\"\n}",
                 "form": []
             },
             "tests": []
@@ -924,12 +931,12 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-07-23T13:14:09.546Z",
-            "modified": "2023-07-23T13:23:53.082Z",
+            "modified": "2023-07-27T01:04:52.465Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"Gt_Id\": 1,\n    \"Gt_Nombre\": \"Otro\",\n    \"Gt_Abreviatura\": \"Otro\"\n  }",
+                "raw": "{\n    \"Gt_Id\": 1,\n    \"Gt_Nombre\": \"Otro\",\n    \"Gt_Abreviatura\": \"Otrodd\"\n  }",
                 "form": []
             },
             "tests": []
@@ -943,12 +950,12 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-07-23T13:37:17.707Z",
-            "modified": "2023-07-23T13:41:51.862Z",
+            "modified": "2023-07-27T02:45:26.090Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\r\n  \"Mec_Id\" : 1,\r\n  \"Mec_Nombre\": \"Juan Pérez\",\r\n  \"Mec_Especialidad\": 1,\r\n  \"Mec_Tipo_Iden\": 2,\r\n  \"Mec_Identificacion\": \"645231\",\r\n  \"Mec_Telefono\": \"3156546\",\r\n  \"Mec_Email\": \"juan@gmail.com\",\r\n  \"Mec_Direccion\": \"Calle 11, 23-23\",\r\n  \"Mec_Genero\": 1,\r\n  \"Mec_Fecha_Registro\": \"2023-07-18\"\r\n}",
+                "raw": "{\n  \"Mec_Id\" : 1,\n  \"Mec_Nombre\": \"Juan Pérez\",\n  \"Mec_Especialidad\": 1,\n  \"Mec_Tipo_Iden\": 2,\n  \"Mec_Identificacion\": \"645231\",\n  \"Mec_Telefono\": \"3156546\",\n  \"Mec_Email\": \"juan@gmail.com\",\n  \"Mec_Direccion\": \"Calle 11, 23-23\",\n  \"Mec_Genero\": 1,\n  \"Mec_Fecha_Registro\": \"2023-07-18\"\n}",
                 "form": []
             },
             "tests": []
@@ -962,12 +969,12 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-07-23T14:01:19.352Z",
-            "modified": "2023-07-23T14:05:35.072Z",
+            "modified": "2023-07-27T01:43:00.762Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"Dm_Id\" : 1,\n  \"Dm_Nombre\": \"William Ortega\",\n  \"Dm_Tipo_Iden\": 2,\n  \"Dm_Identificacion\": \"213123\",\n  \"Dm_Telefono\": \"3156546\",\n  \"Dm_Email\": \"henry@gmail.com\",\n  \"Dm_Direccion\": \"Calle 11, 23-23\",\n  \"Dm_Genero\": 1,\n  \"Dm_Fecha_Registro\": \"2023-07-18\"\n}",
+                "raw": "{\n  \"Dm_Id\" : 1,\n  \"Dm_Nombre\": \"William Ortega\",\n  \"Dm_Tipo_Iden\": 2,\n  \"Dm_Identificacion\": \"213123\",\n  \"Dm_Telefono\": \"3156546\",\n  \"Dm_Email\": \"henry@gmail.com\",\n  \"Dm_Direccion\": \"Calle 11, #23-23\",\n  \"Dm_Genero\": 1,\n  \"Dm_Fecha_Registro\": \"2023-07-18\"\n}",
                 "form": []
             },
             "tests": []
@@ -981,7 +988,7 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-07-23T14:53:12.075Z",
-            "modified": "2023-07-23T15:01:32.336Z",
+            "modified": "2023-07-27T01:18:28.382Z",
             "headers": [],
             "params": [],
             "body": {
@@ -1000,12 +1007,12 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-07-23T15:36:24.721Z",
-            "modified": "2023-07-23T15:40:15.827Z",
+            "modified": "2023-07-27T03:02:57.727Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": " {\r\n  \"Hm_Id\" : 1,\r\n  \"Hm_MecanicoAsig\": 2,\r\n  \"Hm_Descripcion\": \"Reparación del motor\",\r\n  \"Hm_Fecha_Ingreso\": \"2023-07-18\",\r\n  \"Hm_Fecha_Salida\": \"2023-09-20\",\r\n  \"Hm_Descripcion_Problema\": \"Motor no enciende\",\r\n  \"Hm_Descripcion_Reparacion\": \"Reemplazo de bujías y limpieza del carburador\",\r\n  \"Hm_Observaciones\": \"Cliente satisfecho con el servicio\",\r\n  \"Hm_Motocicleta\": 1\r\n }",
+                "raw": " {\n  \"Hm_Id\" : 1,\n  \"Hm_MecanicoAsig\": 2,\n  \"Hm_Descripcion\": \"Reparacion del motor\",\n  \"Hm_Fecha_Ingreso\": \"2023-07-18\",\n  \"Hm_Fecha_Salida\": \"2023-09-20\",\n  \"Hm_Descripcion_Problema\": \"Motor no enciende\",\n  \"Hm_Descripcion_Reparacion\": \"Reemplazo de bujias y limpieza del carburador\",\n  \"Hm_Observaciones\": \"Cliente satisfecho con el servicio\",\n  \"Hm_Motocicleta\": 1\n }",
                 "form": []
             },
             "tests": []
@@ -1359,16 +1366,16 @@
             "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
             "containerId": "a10e8dbc-48c1-49b4-bb0f-4f34fe3604db",
             "name": "PutInvPiezasFrame",
-            "url": "http://127.19.8.7:5010/InvPiezasFrame/PutInvPiezasFrame?idInvPiezasF=11",
+            "url": "http://127.19.8.7:5010/InvPiezasFrame/PutInvPiezasFrame?idInvPiezasF=12",
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-07-23T01:59:00.957Z",
-            "modified": "2023-07-23T02:22:44.034Z",
+            "modified": "2023-07-26T18:21:05.139Z",
             "headers": [],
             "params": [
                 {
                     "name": "idInvPiezasF",
-                    "value": "11",
+                    "value": "12",
                     "isPath": false
                 }
             ],
@@ -1388,7 +1395,7 @@
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-07-23T03:07:49.248Z",
-            "modified": "2023-07-23T15:23:15.121Z",
+            "modified": "2023-07-27T02:25:55.402Z",
             "headers": [],
             "params": [
                 {
@@ -1399,7 +1406,7 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "{\r\n  \"Met_Marca\": 1,\r\n  \"Met_Nom_Modelo\": \"VICTORY ZONTES 310 M\",\r\n  \"Met_Año_Modelo\": \"2023\",\r\n  \"Met_Num_Chasis\": \"ABC1233123\",\r\n  \"Met_Kilometraje\": \"8000\",\r\n  \"Met_Color\": \"rojo\",\r\n  \"Met_Dueño\": 1,\r\n  \"Met_Estado\": 2,\r\n  \"Met_Tipo\": 6,\r\n  \"Met_Categoria\": 1,\r\n  \"Met_Fecha_Registro\": \"2023-03-18\",\r\n  \"Met_Url_imagen\": \"Url_imagen_VICTORY ZONTES 310 M\"\r\n}",
+                "raw": "{\n  \"Met_Marca\": -1,\n  \"Met_Nom_Modelo\": \"VICTORY ZONTES 310 M\",\n  \"Met_Año_Modelo\": \"2023\",\n  \"Met_Num_Chasis\": \"ABC1233123\",\n  \"Met_Kilometraje\": \"8000\",\n  \"Met_Color\": \"rojo\",\n  \"Met_Dueño\": 1,\n  \"Met_Estado\": 2,\n  \"Met_Tipo\": 6,\n  \"Met_Categoria\": 1,\n  \"Met_Fecha_Registro\": \"2023-03-18\",\n  \"Met_Url_imagen\": \"Url_imagen_VICTORY ZONTES 310 M\"\n}",
                 "form": []
             },
             "tests": []
@@ -1413,7 +1420,7 @@
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-07-23T03:26:21.292Z",
-            "modified": "2023-07-23T12:40:32.680Z",
+            "modified": "2023-07-26T22:59:51.258Z",
             "headers": [],
             "params": [
                 {
@@ -1438,7 +1445,7 @@
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-07-23T12:53:58.385Z",
-            "modified": "2023-07-23T13:02:49.556Z",
+            "modified": "2023-07-27T00:31:09.754Z",
             "headers": [],
             "params": [
                 {
@@ -1449,7 +1456,7 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n   \"Td_Nombre\": \"Cedula\",\n    \"Td_Abreviatura\": \"CC\"\n}",
+                "raw": "{\n   \"Td_Nombre\": \"Cedula%\",\n    \"Td_Abreviatura\": \"CC\"\n}",
                 "form": []
             },
             "tests": []
@@ -1459,16 +1466,16 @@
             "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
             "containerId": "12e63172-9cad-433a-8481-62b2c86cc66b",
             "name": "PutGeneroIdentificacion",
-            "url": "http://127.19.8.7:5010/GeneroIdentificacion/PutGeneroIdentificacion?idGeneroIdentificacion=5",
+            "url": "http://127.19.8.7:5010/GeneroIdentificacion/PutGeneroIdentificacion?idGeneroIdentificacion=9",
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-07-23T13:14:09.547Z",
-            "modified": "2023-07-23T13:24:02.664Z",
+            "modified": "2023-07-27T01:05:31.041Z",
             "headers": [],
             "params": [
                 {
                     "name": "idGeneroIdentificacion",
-                    "value": "5",
+                    "value": "9",
                     "isPath": false
                 }
             ],
@@ -1488,7 +1495,7 @@
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-07-23T13:37:17.708Z",
-            "modified": "2023-07-23T13:49:31.527Z",
+            "modified": "2023-07-27T02:43:39.918Z",
             "headers": [],
             "params": [
                 {
@@ -1499,7 +1506,7 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "{\r\n  \"Mec_Nombre\": \"maria Pérez\",\r\n  \"Mec_Especialidad\": 3,\r\n  \"Mec_Tipo_Iden\": 1,\r\n  \"Mec_Identificacion\": \"23333\",\r\n  \"Mec_Telefono\": \"1233123\",\r\n  \"Mec_Email\": \"maria@gmail.com\",\r\n  \"Mec_Direccion\": \"Calle 23, 11-23\",\r\n  \"Mec_Genero\": 2,\r\n  \"Mec_Fecha_Registro\": \"2023-12-18\"\r\n}",
+                "raw": "{\n  \"Mec_Nombre\": \"maria P/érez\",\n  \"Mec_Especialidad\": 3,\n  \"Mec_Tipo_Iden\": 1,\n  \"Mec_Identificacion\": \"23333\",\n  \"Mec_Telefono\": \"1233123\",\n  \"Mec_Email\": \"maria@gmail.com\",\n  \"Mec_Direccion\": \"Calle 23, 11-23\",\n  \"Mec_Genero\": 2,\n  \"Mec_Fecha_Registro\": \"2023-12-18\"\n}",
                 "form": []
             },
             "tests": []
@@ -1509,22 +1516,22 @@
             "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
             "containerId": "bf2b6f02-aba5-405f-88bf-b09d12887964",
             "name": "PutDueñoMotocicleta",
-            "url": "http://127.19.8.7:5010/DuenoMotocicleta/PutDuenoMotocicleta?idDueñoMotocicleta=2",
+            "url": "http://127.19.8.7:5010/DuenoMotocicleta/PutDuenoMotocicleta?idDueñoMotocicleta=4",
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-07-23T14:01:19.353Z",
-            "modified": "2023-07-23T14:05:51.040Z",
+            "modified": "2023-07-27T01:43:26.712Z",
             "headers": [],
             "params": [
                 {
                     "name": "idDueñoMotocicleta",
-                    "value": "2",
+                    "value": "4",
                     "isPath": false
                 }
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"Dm_Nombre\": \"maria Pérez\",\n  \"Dm_Tipo_Iden\": 1,\n  \"Dm_Identificacion\": \"23333\",\n  \"Dm_Telefono\": \"1233123\",\n  \"Dm_Email\": \"maria@gmail.com\",\n  \"Dm_Direccion\": \"Calle 23, 11-23\",\n  \"Dm_Genero\": 2,\n  \"Dm_Fecha_Registro\": \"2023-12-18\"\n}",
+                "raw": "{\n  \"Dm_Nombre\": \"maria Pérez\",\n  \"Dm_Tipo_Iden\": 1,\n  \"Dm_Identificacion\": \"23333\",\n  \"Dm_Telefono\": \"1233123\",\n  \"Dm_Email\": \"maria@gmail.com\",\n  \"Dm_Direccion\": \"Calle 23, 11-23\",\n  \"Dm_Genero\": 2,\n  \"Dm_Fecha_Registro\": \"2023-12-1\"\n}",
                 "form": []
             },
             "tests": []
@@ -1534,22 +1541,22 @@
             "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
             "containerId": "64feca42-7e79-4056-bbc1-b32f85f9b863",
             "name": "PutEstadoMotocicleta",
-            "url": "http://127.19.8.7:5010/EstadoMotocicleta/PutEstadoMotocicleta?idEstadoMotocicleta=4",
+            "url": "http://127.19.8.7:5010/EstadoMotocicleta/PutEstadoMotocicleta?idEstadoMotocicleta=2",
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-07-23T14:53:12.076Z",
-            "modified": "2023-07-23T15:02:17.033Z",
+            "modified": "2023-07-27T01:18:57.553Z",
             "headers": [],
             "params": [
                 {
                     "name": "idEstadoMotocicleta",
-                    "value": "4",
+                    "value": "2",
                     "isPath": false
                 }
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"Em_Nombre\": \"Perdida\"\n}",
+                "raw": "{\n    \"Em_Nombre\": \"Lista para entrega\"\n}",
                 "form": []
             },
             "tests": []
@@ -1559,22 +1566,22 @@
             "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
             "containerId": "0247514a-e4f7-4911-b028-c9d7edde5cf9",
             "name": "PutHistorialMotocicleta",
-            "url": "http://127.19.8.7:5010/HistorialMotocicleta/PutHistorialMotocicleta?idHistorialMotocicleta=2",
+            "url": "http://127.19.8.7:5010/HistorialMotocicleta/PutHistorialMotocicleta?idHistorialMotocicleta=3",
             "method": "PUT",
             "sortNum": 80000,
             "created": "2023-07-23T15:36:24.722Z",
-            "modified": "2023-07-23T15:41:07.843Z",
+            "modified": "2023-07-27T03:03:07.113Z",
             "headers": [],
             "params": [
                 {
                     "name": "idHistorialMotocicleta",
-                    "value": "2",
+                    "value": "3",
                     "isPath": false
                 }
             ],
             "body": {
                 "type": "json",
-                "raw": " {\r\n  \"Hm_Id\" : 2,\r\n  \"Hm_MecanicoAsig\": 1,\r\n  \"Hm_Descripcion\": \"Restauracion del motor\",\r\n  \"Hm_Fecha_Ingreso\": \"2023-02-18\",\r\n  \"Hm_Fecha_Salida\": \"2023-09-20\",\r\n  \"Hm_Descripcion_Problema\": \"Motor quemado\",\r\n  \"Hm_Descripcion_Reparacion\": \"Reemplazo del motor\",\r\n  \"Hm_Observaciones\": \"Cliente satisfecho con el servicio\",\r\n  \"Hm_Motocicleta\": 1\r\n}",
+                "raw": " {\n  \"Hm_Id\" : 2,\n  \"Hm_MecanicoAsig\": 1,\n  \"Hm_Descripcion\": \"Restauracion del motor\",\n  \"Hm_Fecha_Ingreso\": \"2023-02-18\",\n  \"Hm_Fecha_Salida\": \"2023-09-20\",\n  \"Hm_Descripcion_Problema\": \"Motor quemado\",\n  \"Hm_Descripcion_Reparacion\": \"Reemplazo del motor\",\n  \"Hm_Observaciones\": \"Cliente satisfecho con el servicio\",\n  \"Hm_Motocicleta\": 1\n}",
                 "form": []
             },
             "tests": []
@@ -1854,12 +1861,12 @@
             "method": "DELETE",
             "sortNum": 90000,
             "created": "2023-07-23T01:59:00.958Z",
-            "modified": "2023-07-23T02:23:14.818Z",
+            "modified": "2023-07-26T18:22:40.273Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 7\n}",
+                "raw": "{\n  \"IdDelete\" : 12\n}",
                 "form": []
             },
             "tests": []
@@ -1873,12 +1880,12 @@
             "method": "DELETE",
             "sortNum": 90000,
             "created": "2023-07-23T03:07:49.249Z",
-            "modified": "2023-07-23T15:23:29.697Z",
+            "modified": "2023-07-27T02:26:11.243Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 3\n}",
+                "raw": "{\n  \"IdDelete\" : 4\n}",
                 "form": []
             },
             "tests": []
@@ -1892,12 +1899,12 @@
             "method": "DELETE",
             "sortNum": 90000,
             "created": "2023-07-23T03:26:21.293Z",
-            "modified": "2023-07-23T12:41:13.368Z",
+            "modified": "2023-07-26T23:00:05.113Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 5\n}",
+                "raw": "{\n  \"IdDelete\" : 6\n}",
                 "form": []
             },
             "tests": []
@@ -1911,12 +1918,12 @@
             "method": "DELETE",
             "sortNum": 90000,
             "created": "2023-07-23T12:53:58.386Z",
-            "modified": "2023-07-23T13:03:47.620Z",
+            "modified": "2023-07-27T00:31:51.043Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 5\n}",
+                "raw": "{\n  \"IdDelete\" : -6\n}",
                 "form": []
             },
             "tests": []
@@ -1930,12 +1937,12 @@
             "method": "DELETE",
             "sortNum": 90000,
             "created": "2023-07-23T13:14:09.548Z",
-            "modified": "2023-07-23T13:24:07.099Z",
+            "modified": "2023-07-27T01:05:46.103Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 5\n}",
+                "raw": "{\n  \"IdDelete\" : 8\n}",
                 "form": []
             },
             "tests": []
@@ -1949,12 +1956,12 @@
             "method": "DELETE",
             "sortNum": 90000,
             "created": "2023-07-23T13:37:17.709Z",
-            "modified": "2023-07-23T13:49:38.523Z",
+            "modified": "2023-07-27T02:45:41.545Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 3\n}",
+                "raw": "{\n  \"IdDelete\" : 4\n}",
                 "form": []
             },
             "tests": []
@@ -1968,12 +1975,12 @@
             "method": "DELETE",
             "sortNum": 90000,
             "created": "2023-07-23T14:01:19.354Z",
-            "modified": "2023-07-23T14:05:59.128Z",
+            "modified": "2023-07-27T01:43:39.523Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 2\n}",
+                "raw": "{\n  \"IdDelete\" : -5\n}",
                 "form": []
             },
             "tests": []
@@ -1987,12 +1994,12 @@
             "method": "DELETE",
             "sortNum": 90000,
             "created": "2023-07-23T14:53:12.077Z",
-            "modified": "2023-07-23T15:02:34.570Z",
+            "modified": "2023-07-27T01:19:05.860Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 4\n}",
+                "raw": "{\n  \"IdDelete\" : 5\n}",
                 "form": []
             },
             "tests": []
@@ -2006,12 +2013,31 @@
             "method": "DELETE",
             "sortNum": 90000,
             "created": "2023-07-23T15:36:24.723Z",
-            "modified": "2023-07-23T15:41:54.520Z",
+            "modified": "2023-07-27T03:03:13.846Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"IdDelete\" : 2\n}",
+                "raw": "{\n  \"IdDelete\" : -4\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ff10a498-ebb5-422c-9ba9-0d50c65023ae",
+            "colId": "6d78b92a-fcde-4505-bd87-cee6834471d2",
+            "containerId": "0edad9b6-b281-4034-b075-e99e7bffeab4",
+            "name": "CrearUsuario",
+            "url": "http://127.19.8.7:5010/Registro/CrearUsuario",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-07-27T04:04:16.672Z",
+            "modified": "2023-07-27T04:28:56.417Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Email\" : \"JuanJoseDuran@gmail.com\",\n  \"password\" : \"fred1987\"\n}",
                 "form": []
             },
             "tests": []
