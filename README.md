@@ -139,11 +139,11 @@ Creacion la base de datos con las respectivas tablas y relaciones ademas creacio
 
      `npm i -E -D class-validator`
 
-5. Accede al archivo de db_MotoCrafters_sql que esta dentro de la carpeta db: `db_MotoCrafters_sql`
+5. Accede al archivo de db_MotoCrafters_sql que esta dentro de la carpeta db ubicada en la carpeta backend: `db_MotoCrafters_sql`
 
 6. inicia el archivo y monta la base de datos en tu servidor (ejecuta cada una de los comandos SQL de manera Desendente).
 
-7. Para facilitar las consultas ejecuta de manera descente el archivo data_Catalogo que esta dentro de la carpeta db: `data_Catalogo` en ella encontraras data para alimentar la base de datos
+7. Para facilitar las consultas ejecuta de manera descente el archivo data_Catalogo que esta dentro de la carpeta db ubicada en la carpeta backend: `data_Catalogo` en ella encontraras data para alimentar la base de datos
 
 ## **🏁🎆Configuración**🎆🏁
 
