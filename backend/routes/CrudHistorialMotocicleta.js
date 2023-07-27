@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import { proxyPHistorialMotocicleta, proxyPutHistorialMotocicleta, proxyDeleteHistorialMotocicleta } from '../middleware/proxyHistorialMotocicleta.js';
 import {Router} from 'express';
 const CHistorialMotocicleta= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CHistorialMotocicleta.get('/GetHistorialMotocicleta', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CHistorialMotocicleta.post('/PostHistorialMotocicleta', (req,res)=>{
+CHistorialMotocicleta.post('/PostHistorialMotocicleta', proxyPHistorialMotocicleta, (req,res)=>{
     const { Hm_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Hm_Id FROM Historial_Motocicleta WHERE Hm_Id = ${Hm_Id};`,
@@ -64,7 +64,7 @@ function POSTHistorialMotocicleta(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CHistorialMotocicleta.put('/PutHistorialMotocicleta', (req,res)=>{
+CHistorialMotocicleta.put('/PutHistorialMotocicleta', proxyPutHistorialMotocicleta, (req,res)=>{
     const idHistorialMotocicleta = req.query.idHistorialMotocicleta;
     const HistorialMotocicleta = req.body;
     con.query(
@@ -88,7 +88,7 @@ CHistorialMotocicleta.put('/PutHistorialMotocicleta', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CHistorialMotocicleta.delete('/DeleteHistorialMotocicleta', (req,res)=>{
+CHistorialMotocicleta.delete('/DeleteHistorialMotocicleta', proxyDeleteHistorialMotocicleta, (req,res)=>{
     const idHistorialMotocicleta = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Historial_Motocicleta WHERE Hm_Id = ?;`,
