@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import { proxyPMecanico, proxyPutMecanico, proxyDeleteMecanico } from '../middleware/proxyMecanico.js';
 import {Router} from 'express';
 const CMecanico= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CMecanico.get('/GetMecanico', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMecanico.post('/PostMecanico', (req,res)=>{
+CMecanico.post('/PostMecanico', proxyPMecanico, (req,res)=>{
     const { Mec_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Mec_Id FROM Mecanico WHERE Mec_Id = ${Mec_Id};`,
@@ -64,7 +64,7 @@ function POSTMecanico(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMecanico.put('/PutMecanico', (req,res)=>{
+CMecanico.put('/PutMecanico', proxyPutMecanico, (req,res)=>{
     const idMecanico = req.query.idMecanico;
     const Mecanico = req.body;
     con.query(
@@ -88,7 +88,7 @@ CMecanico.put('/PutMecanico', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMecanico.delete('/DeleteMecanico', (req,res)=>{
+CMecanico.delete('/DeleteMecanico', proxyDeleteMecanico, (req,res)=>{
     const idMecanico = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Mecanico WHERE Mec_Id = ?;`,
