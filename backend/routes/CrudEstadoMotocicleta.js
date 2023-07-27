@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import { proxyPEstadoMotocicleta, proxyPutEstadoMotocicleta, proxyDeleteEstadoMotocicleta } from '../middleware/proxyEstadoMotocicleta.js';
 import {Router} from 'express';
 const CEstadoMotocicleta= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CEstadoMotocicleta.get('/GetEstadoMotocicleta', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEstadoMotocicleta.post('/PostEstadoMotocicleta', (req,res)=>{
+CEstadoMotocicleta.post('/PostEstadoMotocicleta', proxyPEstadoMotocicleta, (req,res)=>{
     const { Em_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Em_Id FROM Estado_Motocicleta WHERE Em_Id = ${Em_Id};`,
@@ -64,7 +64,7 @@ function POSTEstadoMotocicleta(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEstadoMotocicleta.put('/PutEstadoMotocicleta', (req,res)=>{
+CEstadoMotocicleta.put('/PutEstadoMotocicleta', proxyPutEstadoMotocicleta, (req,res)=>{
     const idEstadoMotocicleta = req.query.idEstadoMotocicleta;
     const EstadoMotocicleta = req.body;
     con.query(
@@ -88,7 +88,7 @@ CEstadoMotocicleta.put('/PutEstadoMotocicleta', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEstadoMotocicleta.delete('/DeleteEstadoMotocicleta', (req,res)=>{
+CEstadoMotocicleta.delete('/DeleteEstadoMotocicleta', proxyDeleteEstadoMotocicleta, (req,res)=>{
     const idEstadoMotocicleta = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Estado_Motocicleta WHERE Em_Id = ?;`,
