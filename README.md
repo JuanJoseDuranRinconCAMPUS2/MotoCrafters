@@ -179,6 +179,39 @@ Creacion la base de datos con las respectivas tablas y relaciones ademas creacio
 
 ## **💮🚍Rutas🚍💮**
 
+Antes de entrar a la api ejecuta esta ruta para validar tu usuario:
+
+## ✨END POINT DE VALIDACION DE TOKENS✨
+
+## ✨/Registro
+
+**`POST /CrearUsuario`**: El EndPoint `/CrearUsuario` recibe un email y contraseña y devuelve el token que usara el programa para validar el usuario al usar cada endpoint
+
+**Ejemplo de uso**
+
+```
+http://127.19.8.7:5010/Registro/CrearUsuario
+```
+
+**Data de Entrada**
+
+```json
+  {
+  "Email" : "JuanJoseDuran@gmail.com",
+  "password" : "fred1987"
+  }
+```
+**Data de Salida**
+
+```json
+  {
+  "message": "Inicio de sesión exitoso, Se a generado el token de ingreso a la api [El token durara 1 hora]",
+  "token": "Ejemplo_URL"
+}
+```
+
+Al ejecutar este endpoint tendras una hora para usar todas las caracteristicas de la API, despues de ejecutado ya podras ingresar con normalidad[SI NO LO EJECUTAS NINGUN ENDPOINT SERA UTILIZABLE]
+
 Accede a la API utilizando las siguientes rutas:
 
 ## ✨/Colores✨
