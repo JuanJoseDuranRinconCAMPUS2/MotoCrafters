@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import { proxyPTipoIdentificacion, proxyPutTipoIdentificacion, proxyDeleteTipoIdentificacion} from '../middleware/proxyTipoIdentificacion.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CTipoIdentificacion= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CTipoIdentificacion.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTipoIdentificacion.get('/GetTipoIdentificacion', (req,res)=>{
+CTipoIdentificacion.get('/GetTipoIdentificacion', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Tipo_Identificacion`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CTipoIdentificacion.get('/GetTipoIdentificacion', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTipoIdentificacion.post('/PostTipoIdentificacion', proxyPTipoIdentificacion, (req,res)=>{
+CTipoIdentificacion.post('/PostTipoIdentificacion', validation, proxyPTipoIdentificacion, (req,res)=>{
     const { Td_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Td_Id FROM Tipo_Identificacion WHERE Td_Id = ${Td_Id};`,
@@ -64,7 +65,7 @@ function POSTTipoIdentificacion(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTipoIdentificacion.put('/PutTipoIdentificacion', proxyPutTipoIdentificacion, (req,res)=>{
+CTipoIdentificacion.put('/PutTipoIdentificacion', validation, proxyPutTipoIdentificacion, (req,res)=>{
     const idTipoIdentificacion = req.query.idTipoIdentificacion;
     const TipoIdentificacion = req.body;
     con.query(
@@ -88,7 +89,7 @@ CTipoIdentificacion.put('/PutTipoIdentificacion', proxyPutTipoIdentificacion, (r
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTipoIdentificacion.delete('/DeleteTipoIdentificacion', proxyDeleteTipoIdentificacion, (req,res)=>{
+CTipoIdentificacion.delete('/DeleteTipoIdentificacion', validation, proxyDeleteTipoIdentificacion, (req,res)=>{
     const idTipoIdentificacion = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Tipo_Identificacion WHERE Td_Id = ?;`,

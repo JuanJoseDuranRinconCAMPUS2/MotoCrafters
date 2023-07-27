@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPMotocicletas , proxyPutMotocicletas, proxyDeleteMotocicletas}  from '../middleware/proxyMotocicletas.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CMotocicletas= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CMotocicletas.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMotocicletas.get('/GetMotocicletas', (req,res)=>{
+CMotocicletas.get('/GetMotocicletas', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Motocicleta`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CMotocicletas.get('/GetMotocicletas', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMotocicletas.post('/PostMotocicletas', proxyPMotocicletas, (req,res)=>{
+CMotocicletas.post('/PostMotocicletas', validation, proxyPMotocicletas, (req,res)=>{
     const { Mto_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Mto_Id FROM Motocicleta WHERE Mto_Id = ${Mto_Id};`,
@@ -66,7 +67,7 @@ function POSTMotocicletas(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMotocicletas.put('/PutMotocicletas', proxyPutMotocicletas, (req,res)=>{
+CMotocicletas.put('/PutMotocicletas', validation, proxyPutMotocicletas, (req,res)=>{
     const idMotocicletas = req.query.idMotocicleta;
     const Motocicleta = req.body;
     con.query(
@@ -90,7 +91,7 @@ CMotocicletas.put('/PutMotocicletas', proxyPutMotocicletas, (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMotocicletas.delete('/DeleteMotocicletas', proxyDeleteMotocicletas, (req,res)=>{
+CMotocicletas.delete('/DeleteMotocicletas', validation, proxyDeleteMotocicletas, (req,res)=>{
     const idMotocicletas = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Motocicleta WHERE Mto_Id = ?;`,

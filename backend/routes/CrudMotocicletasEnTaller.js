@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import { proxyPMotocicletasEnTaller, proxyPutMotocicletasEnTaller, proxyDeleteMotocicletasEnTaller } from '../middleware/proxyMotocicletasEnTaller.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CMotocicletasEnTaller= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CMotocicletasEnTaller.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMotocicletasEnTaller.get('/GetMotocicletasEnTaller', (req,res)=>{
+CMotocicletasEnTaller.get('/GetMotocicletasEnTaller', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Motocicleta_En_Taller`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CMotocicletasEnTaller.get('/GetMotocicletasEnTaller', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMotocicletasEnTaller.post('/PostMotocicletasEnTaller', proxyPMotocicletasEnTaller, (req,res)=>{
+CMotocicletasEnTaller.post('/PostMotocicletasEnTaller', validation, proxyPMotocicletasEnTaller, (req,res)=>{
     const { Met_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Met_Id FROM Motocicleta_En_Taller WHERE Met_Id = ${Met_Id};`,
@@ -64,7 +65,7 @@ function POSTMotocicletasEnTaller(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMotocicletasEnTaller.put('/PutMotocicletasEnTaller', proxyPutMotocicletasEnTaller, (req,res)=>{
+CMotocicletasEnTaller.put('/PutMotocicletasEnTaller', validation, proxyPutMotocicletasEnTaller, (req,res)=>{
     const idMotocicletasEnTaller = req.query.idMotocicletasEnTaller;
     const MotocicletasEnT = req.body;
     con.query(
@@ -88,7 +89,7 @@ CMotocicletasEnTaller.put('/PutMotocicletasEnTaller', proxyPutMotocicletasEnTall
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMotocicletasEnTaller.delete('/DeleteMotocicletasEnTaller', proxyDeleteMotocicletasEnTaller, (req,res)=>{
+CMotocicletasEnTaller.delete('/DeleteMotocicletasEnTaller', validation, proxyDeleteMotocicletasEnTaller, (req,res)=>{
     const idMotocicletasEnTaller = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Motocicleta_En_Taller WHERE Met_Id = ?;`,

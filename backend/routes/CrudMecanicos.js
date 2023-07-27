@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import { proxyPMecanico, proxyPutMecanico, proxyDeleteMecanico } from '../middleware/proxyMecanico.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CMecanico= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CMecanico.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMecanico.get('/GetMecanico', (req,res)=>{
+CMecanico.get('/GetMecanico', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Mecanico`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CMecanico.get('/GetMecanico', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMecanico.post('/PostMecanico', proxyPMecanico, (req,res)=>{
+CMecanico.post('/PostMecanico', validation, proxyPMecanico, (req,res)=>{
     const { Mec_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Mec_Id FROM Mecanico WHERE Mec_Id = ${Mec_Id};`,
@@ -64,7 +65,7 @@ function POSTMecanico(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMecanico.put('/PutMecanico', proxyPutMecanico, (req,res)=>{
+CMecanico.put('/PutMecanico', validation, proxyPutMecanico, (req,res)=>{
     const idMecanico = req.query.idMecanico;
     const Mecanico = req.body;
     con.query(
@@ -88,7 +89,7 @@ CMecanico.put('/PutMecanico', proxyPutMecanico, (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMecanico.delete('/DeleteMecanico', proxyDeleteMecanico, (req,res)=>{
+CMecanico.delete('/DeleteMecanico', validation, proxyDeleteMecanico, (req,res)=>{
     const idMecanico = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Mecanico WHERE Mec_Id = ?;`,

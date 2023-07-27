@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPGrupoFrame , proxyPutGrupoFrame, proxyDeleteGrupoFrame}  from '../middleware/proxyGrupoFrame.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CGrupoFrame= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CGrupoFrame.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoFrame.get('/GetGrupoFrame', (req,res)=>{
+CGrupoFrame.get('/GetGrupoFrame', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Grupo_Frame`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CGrupoFrame.get('/GetGrupoFrame', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoFrame.post('/PostGrupoFrame', proxyPGrupoFrame, (req,res)=>{
+CGrupoFrame.post('/PostGrupoFrame', validation, proxyPGrupoFrame, (req,res)=>{
     const { Gf_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Gf_Id FROM Grupo_Frame WHERE Gf_Id = ${Gf_Id};`,
@@ -66,7 +67,7 @@ function POSTGrupoFrame(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoFrame.put('/PutGrupoFrame', proxyPutGrupoFrame, (req,res)=>{
+CGrupoFrame.put('/PutGrupoFrame', validation, proxyPutGrupoFrame, (req,res)=>{
     const idGrupoF = req.query.idGrupoF;
     const grupoF = req.body;
     con.query(
@@ -90,7 +91,7 @@ CGrupoFrame.put('/PutGrupoFrame', proxyPutGrupoFrame, (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoFrame.delete('/DeleteGrupoFrame', proxyDeleteGrupoFrame, (req,res)=>{
+CGrupoFrame.delete('/DeleteGrupoFrame', validation, proxyDeleteGrupoFrame, (req,res)=>{
     const idGrupoF = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Grupo_Frame WHERE Gf_Id = ?;`,

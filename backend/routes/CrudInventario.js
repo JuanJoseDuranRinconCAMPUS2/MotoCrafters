@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPInventario , proxyPutInventario, proxyDeleteInventario}  from '../middleware/proxyInventario.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CInventario= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CInventario.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInventario.get('/GetInventario', (req,res)=>{
+CInventario.get('/GetInventario', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Inventario`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CInventario.get('/GetInventario', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInventario.post('/PostInventario', proxyPInventario, (req,res)=>{
+CInventario.post('/PostInventario', validation, proxyPInventario, (req,res)=>{
     const { Inv_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Inv_Id FROM Inventario WHERE Inv_Id = ${Inv_Id};`,
@@ -66,7 +67,7 @@ function POSTInventario(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInventario.put('/PutInventario', proxyPutInventario, (req,res)=>{
+CInventario.put('/PutInventario', validation, proxyPutInventario, (req,res)=>{
     const idInventario = req.query.idInventario;
     const Inventario = req.body;
     con.query(
@@ -90,7 +91,7 @@ CInventario.put('/PutInventario', proxyPutInventario, (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CInventario.delete('/DeleteInventario', proxyDeleteInventario, (req,res)=>{
+CInventario.delete('/DeleteInventario', validation, proxyDeleteInventario, (req,res)=>{
     const idInventario = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Inventario WHERE Inv_Id = ?;`,

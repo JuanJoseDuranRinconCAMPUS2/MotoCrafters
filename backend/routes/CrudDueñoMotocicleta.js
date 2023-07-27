@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import { proxyPDuenoMotocicleta, proxyPutDuenoMotocicleta, proxyDeleteDuenoMotocicleta } from '../middleware/proxyDuenoMotocicleta.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CDuenoMotocicleta= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CDuenoMotocicleta.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CDuenoMotocicleta.get('/GetDuenoMotocicleta', (req,res)=>{
+CDuenoMotocicleta.get('/GetDuenoMotocicleta', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Dueño_Motocicleta`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CDuenoMotocicleta.get('/GetDuenoMotocicleta', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CDuenoMotocicleta.post('/PostDuenoMotocicleta', proxyPDuenoMotocicleta, (req,res)=>{
+CDuenoMotocicleta.post('/PostDuenoMotocicleta', validation, proxyPDuenoMotocicleta, (req,res)=>{
     const { Dm_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Dm_Id FROM Dueño_Motocicleta WHERE Dm_Id = ${Dm_Id};`,
@@ -64,7 +65,7 @@ function POSTCDueñoMotocicleta(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CDuenoMotocicleta.put('/PutDuenoMotocicleta', proxyPutDuenoMotocicleta, (req,res)=>{
+CDuenoMotocicleta.put('/PutDuenoMotocicleta', validation, proxyPutDuenoMotocicleta, (req,res)=>{
     const idDueñoMotocicleta = req.query.idDueñoMotocicleta;
     const DueñoMotocicleta = req.body;
     con.query(
@@ -88,7 +89,7 @@ CDuenoMotocicleta.put('/PutDuenoMotocicleta', proxyPutDuenoMotocicleta, (req,res
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CDuenoMotocicleta.delete('/DeleteDuenoMotocicleta', proxyDeleteDuenoMotocicleta, (req,res)=>{
+CDuenoMotocicleta.delete('/DeleteDuenoMotocicleta', validation, proxyDeleteDuenoMotocicleta, (req,res)=>{
     const idDueñoMotocicleta = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Dueño_Motocicleta WHERE Dm_Id = ?;`,

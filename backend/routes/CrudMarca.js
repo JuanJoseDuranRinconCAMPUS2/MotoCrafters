@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPMarca, proxyPutMarca, proxyDeleteMarca}  from '../middleware/proxyMarca.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CMarca= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CMarca.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMarca.get('/GetMarcas', (req,res)=>{
+CMarca.get('/GetMarcas', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Marca`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CMarca.get('/GetMarcas', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMarca.post('/PostMarcas', proxyPMarca, (req,res)=>{
+CMarca.post('/PostMarcas', validation, proxyPMarca, (req,res)=>{
     const { nombreMarca } = req.body;
     con.query(
         /*SQL*/`INSERT INTO Marca (Mrc_Nombre) VALUES(?);`,
@@ -50,7 +51,7 @@ CMarca.post('/PostMarcas', proxyPMarca, (req,res)=>{
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMarca.put('/PutMarcas', proxyPutMarca, (req,res)=>{
+CMarca.put('/PutMarcas', validation, proxyPutMarca, (req,res)=>{
     const idMarca = req.query.idMarca;
     const {nombreMarca} = req.body;
     con.query(
@@ -74,7 +75,7 @@ CMarca.put('/PutMarcas', proxyPutMarca, (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CMarca.delete('/DeleteMarcas', proxyDeleteMarca, (req,res)=>{
+CMarca.delete('/DeleteMarcas', validation, proxyDeleteMarca, (req,res)=>{
     const idMarca = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Marca WHERE Mrc_Id = ?;`,

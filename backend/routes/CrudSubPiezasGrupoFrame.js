@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPSubPiezasGrupoFrame , proxyPutSubPiezasGrupoFrame, proxyDeleteSubPiezasGrupoFrame}  from '../middleware/proxySubPiezasGrupoFrame.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CSubPiezasGrupoFrame= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CSubPiezasGrupoFrame.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoFrame.get('/GetSubPiezasGrupoFrame', (req,res)=>{
+CSubPiezasGrupoFrame.get('/GetSubPiezasGrupoFrame', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM SubPiezas_Grupo_Frame`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CSubPiezasGrupoFrame.get('/GetSubPiezasGrupoFrame', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoFrame.post('/PostSubPiezasGrupoFrame', proxyPSubPiezasGrupoFrame, (req,res)=>{
+CSubPiezasGrupoFrame.post('/PostSubPiezasGrupoFrame', validation, proxyPSubPiezasGrupoFrame, (req,res)=>{
     const { Sgf_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Sgf_Id FROM SubPiezas_Grupo_Frame WHERE Sgf_Id = ${Sgf_Id};`,
@@ -66,7 +67,7 @@ function POSTSubPiezasGrupoEngine(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoFrame.put('/PutSubPiezasGrupoFrame', proxyPutSubPiezasGrupoFrame, (req,res)=>{
+CSubPiezasGrupoFrame.put('/PutSubPiezasGrupoFrame', validation, proxyPutSubPiezasGrupoFrame, (req,res)=>{
     const idSubPiezasGrupoFrame = req.query.idSubPiezasGrupoFrame;
     const SubPiezasGrupoFrame = req.body;
     con.query(
@@ -90,7 +91,7 @@ CSubPiezasGrupoFrame.put('/PutSubPiezasGrupoFrame', proxyPutSubPiezasGrupoFrame,
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoFrame.delete('/DeleteSubPiezasGrupoFrame', proxyDeleteSubPiezasGrupoFrame, (req,res)=>{
+CSubPiezasGrupoFrame.delete('/DeleteSubPiezasGrupoFrame', validation, proxyDeleteSubPiezasGrupoFrame, (req,res)=>{
     const idSubPiezasGrupoFrame = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM SubPiezas_Grupo_Frame WHERE Sgf_Id = ?;`,

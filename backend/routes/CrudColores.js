@@ -32,7 +32,7 @@ CColores.get('/GetColores', validation,(req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CColores.post('/PostColores', proxyPColores,(req,res)=>{
+CColores.post('/PostColores', validation, proxyPColores,(req,res)=>{
     const valoresColores = Object.values(req.body);
     const coloresJSON = {};    
     valoresColores.forEach((color, index) => {
@@ -57,7 +57,7 @@ CColores.post('/PostColores', proxyPColores,(req,res)=>{
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CColores.put('/PutColores', proxyPutColores, (req,res)=>{
+CColores.put('/PutColores', validation, proxyPutColores, (req,res)=>{
     const valoresColores = Object.values(req.body);
     const idColor = req.query.idColor;
     const coloresJSON = {};    
@@ -87,7 +87,7 @@ CColores.put('/PutColores', proxyPutColores, (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CColores.delete('/DeleteColores', proxyDeleteColores, (req,res)=>{
+CColores.delete('/DeleteColores', validation, proxyDeleteColores, (req,res)=>{
     const idColor = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Colores WHERE Cl_Id = ?;`,

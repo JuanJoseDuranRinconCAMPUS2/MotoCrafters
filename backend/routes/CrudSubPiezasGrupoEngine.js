@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPSubPiezasGrupoEngine , proxyPutSubPiezasGrupoEngine, proxyDeleteSubPiezasGrupoEngine}  from '../middleware/proxySubPiezasGrupoEngine.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CSubPiezasGrupoEngine= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CSubPiezasGrupoEngine.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoEngine.get('/GetSubPiezasGrupoEngine', (req,res)=>{
+CSubPiezasGrupoEngine.get('/GetSubPiezasGrupoEngine', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM SubPiezas_Grupo_Engine`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CSubPiezasGrupoEngine.get('/GetSubPiezasGrupoEngine', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoEngine.post('/PostSubPiezasGrupoEngine', proxyPSubPiezasGrupoEngine, (req,res)=>{
+CSubPiezasGrupoEngine.post('/PostSubPiezasGrupoEngine', validation, proxyPSubPiezasGrupoEngine, (req,res)=>{
     const { Sge_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Sge_Id FROM SubPiezas_Grupo_Engine WHERE Sge_Id = ${Sge_Id};`,
@@ -66,7 +67,7 @@ function POSTSubPiezasGrupoEngine(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoEngine.put('/PutSubPiezasGrupoEngine', proxyPutSubPiezasGrupoEngine, (req,res)=>{
+CSubPiezasGrupoEngine.put('/PutSubPiezasGrupoEngine', validation, proxyPutSubPiezasGrupoEngine, (req,res)=>{
     const idSubPiezasGrupoEngine = req.query.idSubPiezasGrupoEngine;
     const SubPiezasGrupoEngine = req.body;
     con.query(
@@ -90,7 +91,7 @@ CSubPiezasGrupoEngine.put('/PutSubPiezasGrupoEngine', proxyPutSubPiezasGrupoEngi
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CSubPiezasGrupoEngine.delete('/DeleteSubPiezasGrupoEngine', proxyDeleteSubPiezasGrupoEngine, (req,res)=>{
+CSubPiezasGrupoEngine.delete('/DeleteSubPiezasGrupoEngine', validation, proxyDeleteSubPiezasGrupoEngine, (req,res)=>{
     const idSubPiezasGrupoEngine = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM SubPiezas_Grupo_Engine WHERE Sge_Id = ?;`,

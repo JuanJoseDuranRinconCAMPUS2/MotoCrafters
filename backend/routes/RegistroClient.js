@@ -14,7 +14,7 @@ CreacionUsu.post('/CrearUsuario', proxyPUsuario,(req,res)=>{
       const token = jwt.sign({ email: req.Email, password: req.password}, key.key, { expiresIn: '1h' });
   
       res.cookie('token', token, { httpOnly: true, maxAge: 3600000 }); 
-      res.json({ message: 'Inicio de sesión exitoso, usa la token generada para ingresar a la api [El token durara 1 hora]', token });
+      res.json({ message: 'Inicio de sesión exitoso, Se a generado el token de ingreso a la api [El token durara 1 hora]', token });
     } else {
       res.status(401).json({ message: 'Credenciales inválidas' });
     }

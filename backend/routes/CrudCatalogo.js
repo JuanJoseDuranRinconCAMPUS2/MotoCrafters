@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPCatalogo , proxyPutCatalogo, proxyDeleteCatalogo}  from '../middleware/proxyCatalogo.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CCatalogo= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CCatalogo.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CCatalogo.get('/GetCatalogo', (req,res)=>{
+CCatalogo.get('/GetCatalogo', validation,(req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Catalogo`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CCatalogo.get('/GetCatalogo', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CCatalogo.post('/PostCatalogo', proxyPCatalogo, (req,res)=>{
+CCatalogo.post('/PostCatalogo', validation, proxyPCatalogo, (req,res)=>{
     const { Ctl_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Ctl_Id FROM Catalogo WHERE Ctl_Id = ${Ctl_Id};`,
@@ -66,7 +67,7 @@ function POSTCatalogo(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CCatalogo.put('/PutCatalogo', proxyPutCatalogo, (req,res)=>{
+CCatalogo.put('/PutCatalogo', validation, proxyPutCatalogo, (req,res)=>{
     const idCatalogo = req.query.idCatalogo;
     const Catalogo = req.body;
     con.query(
@@ -90,7 +91,7 @@ CCatalogo.put('/PutCatalogo', proxyPutCatalogo, (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CCatalogo.delete('/DeleteCatalogo', proxyDeleteCatalogo, (req,res)=>{
+CCatalogo.delete('/DeleteCatalogo', validation, proxyDeleteCatalogo, (req,res)=>{
     const idCatalogo = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Catalogo WHERE ctl_Id = ?;`,

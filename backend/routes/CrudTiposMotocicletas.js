@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPTiposM, proxyPutTiposM, proxyDeleteTiposM}  from '../middleware/proxyTiposMotocicletas.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CTiposMotocicletas= Router();
 dotenv.config();
@@ -12,7 +13,7 @@ CTiposMotocicletas.use((req,res,next)=>{
 })
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTiposMotocicletas.get('/GetTiposMotocicletas', (req,res)=>{
+CTiposMotocicletas.get('/GetTiposMotocicletas', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Tipo_Motocicleta`,
         (err,data,fil)=>{
@@ -30,7 +31,7 @@ CTiposMotocicletas.get('/GetTiposMotocicletas', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTiposMotocicletas.post('/PostTiposMotocicletas', proxyPTiposM, (req,res)=>{
+CTiposMotocicletas.post('/PostTiposMotocicletas', validation, proxyPTiposM, (req,res)=>{
     const { nombreTipo } = req.body;
     con.query(
         /*SQL*/`INSERT INTO Tipo_Motocicleta (Tpo_Nombre) VALUES(?);`,
@@ -49,7 +50,7 @@ CTiposMotocicletas.post('/PostTiposMotocicletas', proxyPTiposM, (req,res)=>{
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTiposMotocicletas.put('/PutTiposMotocicletas', proxyPutTiposM, (req,res)=>{
+CTiposMotocicletas.put('/PutTiposMotocicletas', validation, proxyPutTiposM, (req,res)=>{
     const idTipos = req.query.idTipos;
     const {nombreTipo} = req.body;
     con.query(
@@ -73,7 +74,7 @@ CTiposMotocicletas.put('/PutTiposMotocicletas', proxyPutTiposM, (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTiposMotocicletas.delete('/DeleteTiposMotocicletas', proxyDeleteTiposM, (req,res)=>{
+CTiposMotocicletas.delete('/DeleteTiposMotocicletas', validation, proxyDeleteTiposM, (req,res)=>{
     const idTipos = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Tipo_Motocicleta WHERE Tpo_Id = ?;`,

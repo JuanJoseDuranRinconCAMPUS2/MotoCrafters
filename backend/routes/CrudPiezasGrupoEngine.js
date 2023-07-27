@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPPiezasGrupoEngine , proxyPutPiezasGrupoEngine, proxyDeletePiezasGrupoEngine}  from '../middleware/proxyPiezasGrupoEngine.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CPiezasGrupoEngine= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CPiezasGrupoEngine.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoEngine.get('/GetPiezasGrupoEngine', (req,res)=>{
+CPiezasGrupoEngine.get('/GetPiezasGrupoEngine', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Piezas_Grupo_Engine`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CPiezasGrupoEngine.get('/GetPiezasGrupoEngine', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoEngine.post('/PostPiezasGrupoEngine', proxyPPiezasGrupoEngine, (req,res)=>{
+CPiezasGrupoEngine.post('/PostPiezasGrupoEngine', validation, proxyPPiezasGrupoEngine, (req,res)=>{
     const { Pge_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Pge_Id FROM Piezas_Grupo_Engine WHERE Pge_Id = ${Pge_Id};`,
@@ -66,7 +67,7 @@ function POSTPiezasGrupoEngine(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoEngine.put('/PutPiezasGrupoEngine', proxyPutPiezasGrupoEngine, (req,res)=>{
+CPiezasGrupoEngine.put('/PutPiezasGrupoEngine', validation, proxyPutPiezasGrupoEngine, (req,res)=>{
     const idPiezasGrupoEngine = req.query.idPiezasGrupoEngine;
     const PiezasGrupoEngine = req.body;
     con.query(
@@ -90,7 +91,7 @@ CPiezasGrupoEngine.put('/PutPiezasGrupoEngine', proxyPutPiezasGrupoEngine, (req,
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoEngine.delete('/DeletePiezasGrupoEngine', proxyDeletePiezasGrupoEngine, (req,res)=>{
+CPiezasGrupoEngine.delete('/DeletePiezasGrupoEngine', validation, proxyDeletePiezasGrupoEngine, (req,res)=>{
     const idPiezasGrupoEngine = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Piezas_Grupo_Engine WHERE Pge_Id = ?;`,

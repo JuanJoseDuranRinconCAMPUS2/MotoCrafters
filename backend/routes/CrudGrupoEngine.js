@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPGrupoEngine , proxyPutGrupoEngine, proxyDeleteGrupoEngine}  from '../middleware/proxyGrupoEngine.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CGrupoEngine= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CGrupoEngine.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoEngine.get('/GetGrupoEngine', (req,res)=>{
+CGrupoEngine.get('/GetGrupoEngine', validation,(req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Grupo_Engine`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CGrupoEngine.get('/GetGrupoEngine', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoEngine.post('/PostGrupoEngine', proxyPGrupoEngine, (req,res)=>{
+CGrupoEngine.post('/PostGrupoEngine', validation, proxyPGrupoEngine, (req,res)=>{
     const { Ge_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Ge_Id FROM Grupo_Engine WHERE Ge_Id = ${Ge_Id};`,
@@ -66,7 +67,7 @@ function POSTGrupoEngine(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoEngine.put('/PutGrupoEngine', proxyPutGrupoEngine, (req,res)=>{
+CGrupoEngine.put('/PutGrupoEngine', validation, proxyPutGrupoEngine, (req,res)=>{
     const idGrupoE = req.query.idGrupoE;
     const grupoE = req.body;
     con.query(
@@ -90,7 +91,7 @@ CGrupoEngine.put('/PutGrupoEngine', proxyPutGrupoEngine, (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGrupoEngine.delete('/DeleteGrupoEngine', proxyDeleteGrupoEngine, (req,res)=>{
+CGrupoEngine.delete('/DeleteGrupoEngine', validation, proxyDeleteGrupoEngine, (req,res)=>{
     const idGrupoF = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Grupo_Engine WHERE Ge_Id = ?;`,

@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPPiezasGrupoFrame , proxyPutPiezasGrupoFrame, proxyDeletePiezasGrupoFrame} from '../middleware/proxyPiezasGrupoFrame.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CPiezasGrupoFrame= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CPiezasGrupoFrame.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoFrame.get('/GetPiezasGrupoFrame', (req,res)=>{
+CPiezasGrupoFrame.get('/GetPiezasGrupoFrame', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Piezas_Grupo_Frame`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CPiezasGrupoFrame.get('/GetPiezasGrupoFrame', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoFrame.post('/PostPiezasGrupoFrame', proxyPPiezasGrupoFrame, (req,res)=>{
+CPiezasGrupoFrame.post('/PostPiezasGrupoFrame', validation, proxyPPiezasGrupoFrame, (req,res)=>{
     const { Pgf_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Pgf_Id FROM Piezas_Grupo_Frame WHERE Pgf_Id = ${Pgf_Id};`,
@@ -66,7 +67,7 @@ function POSTPiezasGrupoFrame(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoFrame.put('/PutPiezasGrupoFrame', proxyPutPiezasGrupoFrame, (req,res)=>{
+CPiezasGrupoFrame.put('/PutPiezasGrupoFrame', validation, proxyPutPiezasGrupoFrame, (req,res)=>{
     const idPiezasGrupoFrame = req.query.idPiezasGrupoFrame;
     const PiezasGrupoFrame = req.body;
     con.query(
@@ -90,7 +91,7 @@ CPiezasGrupoFrame.put('/PutPiezasGrupoFrame', proxyPutPiezasGrupoFrame, (req,res
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CPiezasGrupoFrame.delete('/DeletePiezasGrupoFrame', proxyDeletePiezasGrupoFrame, (req,res)=>{
+CPiezasGrupoFrame.delete('/DeletePiezasGrupoFrame', validation, proxyDeletePiezasGrupoFrame, (req,res)=>{
     const idPiezasGrupoFrame = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Piezas_Grupo_Frame WHERE Pgf_Id = ?;`,

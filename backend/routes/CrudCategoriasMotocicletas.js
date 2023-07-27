@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import {proxyPCategorias, proxyPutCategorias, proxyDeleteCategorias}  from '../middleware/proxyCategorias.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CCategoriasMotocicletas= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CCategoriasMotocicletas.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CCategoriasMotocicletas.get('/GetCategoriasMotocicletas', (req,res)=>{
+CCategoriasMotocicletas.get('/GetCategoriasMotocicletas', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Categoria_Motocicleta`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CCategoriasMotocicletas.get('/GetCategoriasMotocicletas', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CCategoriasMotocicletas.post('/PostCategoriasMotocicletas', proxyPCategorias, (req,res)=>{
+CCategoriasMotocicletas.post('/PostCategoriasMotocicletas', validation, proxyPCategorias, (req,res)=>{
     const { nombreCategoria } = req.body;
     con.query(
         /*SQL*/`INSERT INTO Categoria_Motocicleta (Cat_Nombre) VALUES(?);`,
@@ -50,7 +51,7 @@ CCategoriasMotocicletas.post('/PostCategoriasMotocicletas', proxyPCategorias, (r
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CCategoriasMotocicletas.put('/PutCategoriasMotocicletas',proxyPutCategorias, (req,res)=>{
+CCategoriasMotocicletas.put('/PutCategoriasMotocicletas',validation, proxyPutCategorias, (req,res)=>{
     const idCategoria = req.query.idCategoria;
     const {nombreCategoria} = req.body;
     con.query(
@@ -74,7 +75,7 @@ CCategoriasMotocicletas.put('/PutCategoriasMotocicletas',proxyPutCategorias, (re
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CCategoriasMotocicletas.delete('/DeleteCategoriasMotocicletas', proxyDeleteCategorias, (req,res)=>{
+CCategoriasMotocicletas.delete('/DeleteCategoriasMotocicletas', validation, proxyDeleteCategorias, (req,res)=>{
     const idCategoria = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Categoria_Motocicleta WHERE Cat_Id = ?;`,

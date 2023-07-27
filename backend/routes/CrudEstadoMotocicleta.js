@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import { proxyPEstadoMotocicleta, proxyPutEstadoMotocicleta, proxyDeleteEstadoMotocicleta } from '../middleware/proxyEstadoMotocicleta.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CEstadoMotocicleta= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CEstadoMotocicleta.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEstadoMotocicleta.get('/GetEstadoMotocicleta', (req,res)=>{
+CEstadoMotocicleta.get('/GetEstadoMotocicleta', validation, (req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Estado_Motocicleta`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CEstadoMotocicleta.get('/GetEstadoMotocicleta', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEstadoMotocicleta.post('/PostEstadoMotocicleta', proxyPEstadoMotocicleta, (req,res)=>{
+CEstadoMotocicleta.post('/PostEstadoMotocicleta', validation, proxyPEstadoMotocicleta, (req,res)=>{
     const { Em_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Em_Id FROM Estado_Motocicleta WHERE Em_Id = ${Em_Id};`,
@@ -64,7 +65,7 @@ function POSTEstadoMotocicleta(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEstadoMotocicleta.put('/PutEstadoMotocicleta', proxyPutEstadoMotocicleta, (req,res)=>{
+CEstadoMotocicleta.put('/PutEstadoMotocicleta', validation, proxyPutEstadoMotocicleta, (req,res)=>{
     const idEstadoMotocicleta = req.query.idEstadoMotocicleta;
     const EstadoMotocicleta = req.body;
     con.query(
@@ -88,7 +89,7 @@ CEstadoMotocicleta.put('/PutEstadoMotocicleta', proxyPutEstadoMotocicleta, (req,
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CEstadoMotocicleta.delete('/DeleteEstadoMotocicleta', proxyDeleteEstadoMotocicleta, (req,res)=>{
+CEstadoMotocicleta.delete('/DeleteEstadoMotocicleta', validation, proxyDeleteEstadoMotocicleta, (req,res)=>{
     const idEstadoMotocicleta = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Estado_Motocicleta WHERE Em_Id = ?;`,

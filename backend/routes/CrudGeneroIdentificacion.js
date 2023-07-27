@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
 import { proxyPGeneroIdentificacion, proxyPutGeneroIdentificacion, proxyDeleteGeneroIdentificacion } from '../middleware/proxyGeneroIdentificacion.js';
+import validation from '../Authentication/Auth.js';
 import {Router} from 'express';
 const CGeneroIdentificacion= Router();
 dotenv.config();
@@ -13,7 +14,7 @@ CGeneroIdentificacion.use((req,res,next)=>{
 
 // metodo get
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGeneroIdentificacion.get('/GetGeneroIdentificacion', (req,res)=>{
+CGeneroIdentificacion.get('/GetGeneroIdentificacion', validation,(req,res)=>{
     con.query(
         /*SQL*/`SELECT * FROM Genero_Identificacion`,
         (err,data,fil)=>{
@@ -31,7 +32,7 @@ CGeneroIdentificacion.get('/GetGeneroIdentificacion', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGeneroIdentificacion.post('/PostGeneroIdentificacion', proxyPGeneroIdentificacion, (req,res)=>{
+CGeneroIdentificacion.post('/PostGeneroIdentificacion', validation, proxyPGeneroIdentificacion, (req,res)=>{
     const { Gt_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Gt_Id FROM Genero_Identificacion WHERE Gt_Id = ${Gt_Id};`,
@@ -64,7 +65,7 @@ function POSTGeneroIdentificacion(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGeneroIdentificacion.put('/PutGeneroIdentificacion', proxyPutGeneroIdentificacion, (req,res)=>{
+CGeneroIdentificacion.put('/PutGeneroIdentificacion', validation, proxyPutGeneroIdentificacion, (req,res)=>{
     const idGeneroIdentificacion = req.query.idGeneroIdentificacion;
     const GeneroIdentificacion = req.body;
     con.query(
@@ -88,7 +89,7 @@ CGeneroIdentificacion.put('/PutGeneroIdentificacion', proxyPutGeneroIdentificaci
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGeneroIdentificacion.delete('/DeleteGeneroIdentificacion', proxyDeleteGeneroIdentificacion,(req,res)=>{
+CGeneroIdentificacion.delete('/DeleteGeneroIdentificacion', validation, proxyDeleteGeneroIdentificacion,(req,res)=>{
     const idGeneroIdentificacion = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Genero_Identificacion WHERE Gt_Id = ?;`,
