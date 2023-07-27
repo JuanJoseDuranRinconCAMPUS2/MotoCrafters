@@ -26,7 +26,7 @@ __decorate([
 __decorate([
     Expose({ name: "Esp_Nombre" }),
     IsDefined({ message: () => { throw { status: 400, message: 'El parametro Esp_Nombre es obligatorio' }; } }),
-    MaxLength(200, { message: () => { throw { status: 400, message: 'El parametro Esp_Nombre debe tener como máximo 200 caracteres' }; } }),
+    MaxLength(50, { message: () => { throw { status: 400, message: 'El parametro Esp_Nombre debe tener como máximo 50 caracteres' }; } }),
     Matches(/^[A-Za-z0-9-\s.,!]+$/, { message: () => { throw { status: 400, message: 'El parametro Esp_Nombre debe ser una cadena de texto sin caracteres especiales excepto el "-' }; } }),
     IsNotEmpty({ message: () => { throw { status: 400, message: 'El parametro Esp_Nombre no puede estar vacio' }; } }),
     __metadata("design:type", String)
@@ -51,7 +51,7 @@ export class validateBodyPutEspecialidad {
 __decorate([
     Expose({ name: "Esp_Nombre" }),
     IsDefined({ message: () => { throw { status: 400, message: 'El parametro Esp_Nombre es obligatorio' }; } }),
-    MaxLength(200, { message: () => { throw { status: 400, message: 'El parametro Esp_Nombre debe tener como máximo 200 caracteres' }; } }),
+    MaxLength(50, { message: () => { throw { status: 400, message: 'El parametro Esp_Nombre debe tener como máximo 50 caracteres' }; } }),
     Matches(/^[A-Za-z0-9-\s.,!]+$/, { message: () => { throw { status: 400, message: 'El parametro Esp_Nombre debe ser una cadena de texto sin caracteres especiales excepto el "-' }; } }),
     IsNotEmpty({ message: () => { throw { status: 400, message: 'El parametro Esp_Nombre no puede estar vacio' }; } }),
     __metadata("design:type", String)

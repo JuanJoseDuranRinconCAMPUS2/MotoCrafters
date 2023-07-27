@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import { proxyPTipoIdentificacion, proxyPutTipoIdentificacion, proxyDeleteTipoIdentificacion} from '../middleware/proxyTipoIdentificacion.js';
 import {Router} from 'express';
 const CTipoIdentificacion= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CTipoIdentificacion.get('/GetTipoIdentificacion', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTipoIdentificacion.post('/PostTipoIdentificacion', (req,res)=>{
+CTipoIdentificacion.post('/PostTipoIdentificacion', proxyPTipoIdentificacion, (req,res)=>{
     const { Td_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Td_Id FROM Tipo_Identificacion WHERE Td_Id = ${Td_Id};`,
@@ -64,7 +64,7 @@ function POSTTipoIdentificacion(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTipoIdentificacion.put('/PutTipoIdentificacion', (req,res)=>{
+CTipoIdentificacion.put('/PutTipoIdentificacion', proxyPutTipoIdentificacion, (req,res)=>{
     const idTipoIdentificacion = req.query.idTipoIdentificacion;
     const TipoIdentificacion = req.body;
     con.query(
@@ -88,7 +88,7 @@ CTipoIdentificacion.put('/PutTipoIdentificacion', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CTipoIdentificacion.delete('/DeleteTipoIdentificacion', (req,res)=>{
+CTipoIdentificacion.delete('/DeleteTipoIdentificacion', proxyDeleteTipoIdentificacion, (req,res)=>{
     const idTipoIdentificacion = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Tipo_Identificacion WHERE Td_Id = ?;`,
