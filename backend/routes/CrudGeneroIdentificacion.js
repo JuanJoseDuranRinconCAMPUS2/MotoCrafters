@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import mysql from 'mysql2';
-
+import { proxyPGeneroIdentificacion, proxyPutGeneroIdentificacion, proxyDeleteGeneroIdentificacion } from '../middleware/proxyGeneroIdentificacion.js';
 import {Router} from 'express';
 const CGeneroIdentificacion= Router();
 dotenv.config();
@@ -31,7 +31,7 @@ CGeneroIdentificacion.get('/GetGeneroIdentificacion', (req,res)=>{
 
 // metodo post
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGeneroIdentificacion.post('/PostGeneroIdentificacion', (req,res)=>{
+CGeneroIdentificacion.post('/PostGeneroIdentificacion', proxyPGeneroIdentificacion, (req,res)=>{
     const { Gt_Id } = req.body;
     con.query(
         /*SQL*/`SELECT Gt_Id FROM Genero_Identificacion WHERE Gt_Id = ${Gt_Id};`,
@@ -64,7 +64,7 @@ function POSTGeneroIdentificacion(res,data) {
 
 // metodo put
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGeneroIdentificacion.put('/PutGeneroIdentificacion', (req,res)=>{
+CGeneroIdentificacion.put('/PutGeneroIdentificacion', proxyPutGeneroIdentificacion, (req,res)=>{
     const idGeneroIdentificacion = req.query.idGeneroIdentificacion;
     const GeneroIdentificacion = req.body;
     con.query(
@@ -88,7 +88,7 @@ CGeneroIdentificacion.put('/PutGeneroIdentificacion', (req,res)=>{
 
 // metodo delete
 // ━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━
-CGeneroIdentificacion.delete('/DeleteGeneroIdentificacion', (req,res)=>{
+CGeneroIdentificacion.delete('/DeleteGeneroIdentificacion', proxyDeleteGeneroIdentificacion,(req,res)=>{
     const idGeneroIdentificacion = req.body.IdDelete;
     con.query(
         /*SQL*/`DELETE FROM Genero_Identificacion WHERE Gt_Id = ?;`,
